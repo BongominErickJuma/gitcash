@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavLinks = (props) => {
+const NavItems = (props) => {
   return (
     <a href={props.href}>
       <span>{props.name}</span>
@@ -9,4 +9,4 @@ const NavLinks = (props) => {
   );
 };
 
-export default NavLinks;
+export default NavItems;

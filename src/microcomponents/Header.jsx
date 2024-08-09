@@ -1,15 +1,16 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import NavLinks from "./NavLinks";
-import navlist from "./Navlist";
+import navlist from "./navlists";
+import NavItems from "./NavItems";
 
 const Header = () => {
   const location = useLocation();
 
   // Determine button text and link based on the current route
   const isOnLoginPage = location.pathname === "/login";
-  const buttonText = isOnLoginPage ? "Sign up" : "Get Started";
+ 
+  const buttonText = isOnLoginPage ? "Sign up" : "Login";
   const buttonLink = isOnLoginPage ? "/signup" : "/login";
   return (
     <header
@@ -26,7 +27,7 @@ const Header = () => {
           <ul>
             {navlist.map((nav, ind) => (
               <li className="dropdown" key={ind}>
-                <NavLinks href={nav.href} name={nav.title} />
+                <NavItems href={nav.href} name={nav.title} />
                 <Dropdown dropitems={nav.dropitems} />
               </li>
             ))}

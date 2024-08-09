@@ -1,4 +1,4 @@
-const companies = [
+const details = [
   {
     id: 1,
     name: "Google",
@@ -81,4 +81,4 @@ const companies = [
       "Uber is a ride-hailing service founded in 2009, connecting drivers with riders via a mobile app.",
   },
 ];
-export default companies;
+export default details;

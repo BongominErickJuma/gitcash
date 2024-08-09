@@ -1,12 +1,12 @@
 import React from "react";
-import companies from "./Details";
+import details from "./Details";
 
 const Companies = () => {
   return (
     <section id="services" className="services section">
       <div className="container">
         <div className="row gy-4">
-          {companies.map((company, idx) => (
+          {details.map((company, idx) => (
             <div
               key={idx}
               className="col-lg-3 col-md-6"
