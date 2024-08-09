@@ -1,22 +1,26 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import NavLinks from "./NavLinks";
 import navlist from "./Navlist";
 
 const Header = () => {
+  const location = useLocation();
+
+  // Determine button text and link based on the current route
+  const isOnLoginPage = location.pathname === "/login";
+  const buttonText = isOnLoginPage ? "Sign up" : "Get Started";
+  const buttonLink = isOnLoginPage ? "/signup" : "/login";
   return (
     <header
       id="header"
       className="header d-flex align-items-center fixed-top bg-black"
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <a
-          href="index.html"
-          className="logo d-flex align-items-center me-auto me-lg-0"
-        >
+        <Link to="/" className="logo d-flex align-items-center me-auto me-lg-0">
           <h1 className="sitename">Gitcash</h1>
           <span>.</span>
-        </a>
+        </Link>
 
         <nav id="navmenu" className="navmenu">
           <ul>
@@ -32,9 +36,9 @@ const Header = () => {
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-        <a className="btn-getstarted" href="/login">
-          Get Started
-        </a>
+        <Link className="btn-getstarted" to={buttonLink}>
+          {buttonText}
+        </Link>
       </div>
     </header>
   );
