@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container mt-5 account-form">
+    <div className="container min-vh-100 mt-5 account-form">
       <div className="row justify-content-center">
         <div className="col-md-4">
           <div className="card mt-5">
