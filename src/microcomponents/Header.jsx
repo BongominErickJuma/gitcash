@@ -9,17 +9,14 @@ const Header = () => {
 
   // Determine button text and link based on the current route
   const isOnLoginPage = location.pathname === "/login";
- 
+
   const buttonText = isOnLoginPage ? "Sign up" : "Login";
   const buttonLink = isOnLoginPage ? "/signup" : "/login";
   return (
-    <header
-      id="header"
-      className="header d-flex align-items-center fixed-top bg-black"
-    >
-      <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <header id="header" className="header d-flex align-items-center fixed-top ">
+      <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between ">
         <Link to="/" className="logo d-flex align-items-center me-auto me-lg-0">
-          <h1 className="sitename">Gitcash</h1>
+          <h1 className="sitename">GitCash</h1>
           <span>.</span>
         </Link>
 

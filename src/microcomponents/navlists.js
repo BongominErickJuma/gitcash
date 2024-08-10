@@ -1,27 +1,5 @@
 const navlist = [
   {
-    title: "Products",
-    href: "#",
-    dropitems: [
-      { title: "Product 1", href: "#" },
-      { title: "Product 2", href: "#" },
-      { title: "Product 3", href: "#" },
-      { title: "Product 4", href: "#" },
-      { title: "Product 5", href: "#" },
-    ],
-  },
-  {
-    title: "Solutions",
-    href: "#",
-    dropitems: [
-      { title: "Solution 1", href: "#" },
-      { title: "Solution 2", href: "#" },
-      { title: "Solution 3", href: "#" },
-      { title: "Solution 4", href: "#" },
-      { title: "Solution 5", href: "#" },
-    ],
-  },
-  {
     title: "Resources",
     href: "#",
     dropitems: [

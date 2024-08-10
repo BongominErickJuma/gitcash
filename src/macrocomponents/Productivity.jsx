@@ -2,24 +2,17 @@ import React from "react";
 
 const Productivity = () => {
   return (
-    <section
-      id="call-to-action"
-      className="call-to-action section "
-    >
-      <div className="container">
+    <section id="call-to-action" className="call-to-action section mb-0 pb-0">
+      <div className="container border">
         <div
           className="row justify-content-center"
           data-aos="zoom-in"
           data-aos-delay="100"
         >
-          <div className="col-xl-10">
+          <div className="col-xl-12">
             <div>
               <p>Productivity</p>
-              <h2>Accelerate innovation</h2>
-              <h3>
-                Our AI-powered platform increases the pace of software
-                development.
-              </h3>
+              <h3></h3>
             </div>
           </div>
         </div>

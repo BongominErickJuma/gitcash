@@ -5,6 +5,14 @@ const Footer = () => {
     <footer id="footer" className="footer dark-background">
       <div className="footer-top">
         <div className="container">
+          <div className="col-xl-12 floating-on-border container shadow rounded-4">
+            <div>
+              <h3 className="pt-2">
+                Our AI-powered platform increases the pace of software
+                development.
+              </h3>
+            </div>
+          </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6 footer-about">
               <a href="index.html" className="logo d-flex align-items-center">
@@ -100,7 +108,11 @@ const Footer = () => {
               >
                 <div className="newsletter-form">
                   <input type="email" name="email" />
-                  <input type="submit" value="Subscribe" />
+                  <input
+                    type="submit"
+                    value="Subscribe"
+                    className="text-white"
+                  />
                 </div>
                 <div className="loading">Loading</div>
                 <div className="error-message"></div>

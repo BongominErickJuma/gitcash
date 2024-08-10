@@ -14,25 +14,16 @@ const ProjectCard = ({
   isExternalLink,
 }) => {
   const CardContent = (
-    <div className="card bg-black text-white h-100">
+    <div className="card text-white h-100">
       <div className="card-body">
         <div className="d-flex align-items-center mb-3">
           <i
             className={`bi ${iconClass} me-2`}
             style={{ fontSize: "2rem", color: tools[0].color }}
           ></i>
-          <h5 className="card-title mb-0">{title}</h5>
+          <h5 className=" mb-0">{title}</h5>
         </div>
-        <div className="d-flex justify-content-center align-items-center mb-3">
-          {tools.map((tool, index) => (
-            <i
-              key={index}
-              className={`bi ${tool.icon}`}
-              style={{ fontSize: "1rem", color: tool.color }}
-            ></i>
-          ))}
-        </div>
-        <p className="card-text">{description}</p>
+        <p className="text-black">{description}</p>
       </div>
       <div className="card-footer d-flex justify-content-between align-items-center">
         <small className="text-info">{time} ago</small>
@@ -42,7 +33,7 @@ const ProjectCard = ({
   );
 
   return (
-    <div className="col-md-4 mb-4" data-aos={aosType}>
+    <div className="col-md-3 mb-4" data-aos={aosType}>
       {isExternalLink ? (
         <a
           href={contributeLink}
