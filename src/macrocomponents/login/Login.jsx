@@ -36,7 +36,7 @@ const Login = () => {
             <div className="card-body">
               <h2 className="card-title text-start">Log in to Gitcash</h2>
               <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+                <div className="mb-3" data-aos="zoom-in">
                   <label htmlFor="email" className="form-label">
                     Email address
                   </label>
@@ -50,7 +50,7 @@ const Login = () => {
                     required
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3" data-aos="zoom-in">
                   <label htmlFor="password" className="form-label">
                     Password
                   </label>

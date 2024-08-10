@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 
 import UserInformation from "./UserInformation";
 import TechnologyExperience from "./TechnologyExperience";
@@ -21,8 +20,6 @@ const Signup = () => {
 
   const [error, setError] = useState("");
   const [step, setStep] = useState(1);
-
- 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -61,11 +58,10 @@ const Signup = () => {
         return;
       }
     }
-  
+
     setError("");
     setStep((prevStep) => prevStep + 1);
   };
-  
 
   const handlePrevious = () => {
     setStep((prevStep) => prevStep - 1);
@@ -85,10 +81,12 @@ const Signup = () => {
         <div className="col-md-4">
           <div className="card mt-5">
             <div className="card-body">
-              <h2 className="card-title text-start">Sign up for Gitcash</h2>
+              <h2 className="card-title text-start mb-3">
+                Sign up for Gitcash
+              </h2>
               <form onSubmit={handleSubmit}>
                 {step === 1 && (
-                  <div data-aos="fade-left">
+                  <div data-aos="zoom-in">
                     <UserInformation
                       formData={formData}
                       handleChange={handleChange}
@@ -96,7 +94,7 @@ const Signup = () => {
                   </div>
                 )}
                 {step === 2 && (
-                  <div data-aos="fade-left">
+                  <div data-aos="zoom-in">
                     <TechnologyExperience
                       formData={formData}
                       handleChange={handleChange}
@@ -104,7 +102,7 @@ const Signup = () => {
                   </div>
                 )}
                 {step === 3 && (
-                  <div data-aos="fade-left">
+                  <div data-aos="zoom-in">
                     <OrganizationInformation
                       formData={formData}
                       handleChange={handleChange}
@@ -133,10 +131,7 @@ const Signup = () => {
                     </button>
                   )}
                   {step === 3 && (
-                    <button
-                      type="submit"
-                      className="btn btn-primary border-0"
-                    >
+                    <button type="submit" className="btn btn-primary border-0">
                       Signup
                     </button>
                   )}

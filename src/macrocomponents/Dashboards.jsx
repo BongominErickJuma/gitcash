@@ -5,11 +5,7 @@ const Dashboards = () => {
   return (
     <section id="features" className="features section min-vh-100 ">
       <div className="container">
-        <div
-          className="features-image col-lg-12"
-          data-aos="zoom-out"
-          data-aos-delay="100"
-        >
+        <div className="features-image col-lg-12">
           <img
             src={codeSnippet}
             alt="vs-code snippet"

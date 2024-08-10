@@ -73,6 +73,14 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.text-info {
+  color: var(--accent-color) !important;
+}
+.bg-info {
+  color: var(--background-color) !important;
+  background: var(--accent-color) !important;
+}
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -301,6 +309,7 @@ h6 {
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover > a {
     background-color: var(--nav-dropdown-hover-color);
+    color: var(--nav-dropdown-background-color);
   }
 
   .navmenu .dropdown:hover > ul {
