@@ -1,20 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import navlist from "./navlists";
 import NavItems from "./NavItems";
+import navlist from "./navlists";
 
 const Header = () => {
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Determine button text and link based on the current route
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const isOnHomePage = location.pathname === "/";
   const isOnLoginPage = location.pathname === "/login";
+  const headerClassName = `header d-flex align-items-center fixed-top ${
+    isOnHomePage ? "" : "bg-dark"
+  }`;
 
   const buttonText = isOnLoginPage ? "Sign up" : "Login";
   const buttonLink = isOnLoginPage ? "/signup" : "/login";
+
   return (
-    <header id="header" className="header d-flex align-items-center fixed-top ">
-      <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between ">
+    <header
+      id="header"
+      className={headerClassName}
+      style={{
+        backgroundColor: isScrolled ? "black" : "transparent",
+        transition: "background-color 0.3s ease",
+      }}
+    >
+      <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center me-auto me-lg-0">
           <h1 className="sitename">GitCash</h1>
           <span>.</span>
@@ -34,6 +55,7 @@ const Header = () => {
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+
         <Link className="btn-getstarted" to={buttonLink}>
           {buttonText}
         </Link>

@@ -1,142 +1,45 @@
 import React, { useState } from "react";
-
-import UserInformation from "./UserInformation";
-import TechnologyExperience from "./TechnologyExperience";
-import OrganizationInformation from "./OrganizationInformation";
+import IndividualSignup from "./IndividualSignup/IndividualSignup"; // Assuming these components exist
+import OrganizationSignup from "./OrganizationSignup/OrganizationSignup";
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    password: "",
-    confirmPassword: "",
-    technologies: "",
-    experience: "",
-    company: "",
-    organizationName: "",
-    organizationAddress: "",
-  });
+  const [signupType, setSignupType] = useState(null);
 
-  const [error, setError] = useState("");
-  const [step, setStep] = useState(1);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleNext = () => {
-    if (step === 1) {
-      if (
-        !formData.name ||
-        !formData.email ||
-        !formData.phone ||
-        !formData.password ||
-        !formData.confirmPassword
-      ) {
-        setError("All fields are required");
-        return;
-      } else if (formData.password !== formData.confirmPassword) {
-        setError("Passwords do not match");
-        return;
-      } else if (formData.password.length < 8) {
-        setError("Password must be at least 8 characters long");
-        return;
-      }
-    } else if (step === 2) {
-      if (!formData.technologies || !formData.experience || !formData.company) {
-        setError("All fields are required");
-        return;
-      }
-    } else if (step === 3) {
-      if (!formData.organizationName || !formData.organizationAddress) {
-        setError("All fields are required");
-        return;
-      }
-    }
-
-    setError("");
-    setStep((prevStep) => prevStep + 1);
-  };
-
-  const handlePrevious = () => {
-    setStep((prevStep) => prevStep - 1);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (step === 3) {
-      // Handle form submission (e.g., send data to the backend)
-      console.log("Form data submitted:", formData);
+  const renderSignupForm = () => {
+    if (signupType === "individual") {
+      return <IndividualSignup />;
+    } else if (signupType === "organization") {
+      return <OrganizationSignup />;
+    } else {
+      return (
+        <div className="d-flex flex-column align-items-center">
+          <button
+            className="btn btn-primary mb-3 w-100"
+            onClick={() => setSignupType("individual")}
+          >
+            Sign up as Individual
+          </button>
+          <button
+            className="btn btn-secondary w-100"
+            onClick={() => setSignupType("organization")}
+          >
+            Sign up as Organization
+          </button>
+        </div>
+      );
     }
   };
 
   return (
-    <div className="container min-vh-100 account-form d-flex  justify-content-center align-items-center">
+    <div className="container min-vh-100 mt-5 account-form d-flex justify-content-center align-items-center">
       <div className="row w-100 d-flex justify-content-center align-items-center">
         <div className="col-4">
           <div className="card mt-5">
             <div className="card-body">
               <h2 className="card-title text-start mb-3">
-                Sign up for Gitcash
+                Sign up for GitCash
               </h2>
-              <form onSubmit={handleSubmit}>
-                {step === 1 && (
-                  <div data-aos="zoom-in">
-                    <UserInformation
-                      formData={formData}
-                      handleChange={handleChange}
-                    />
-                  </div>
-                )}
-                {step === 2 && (
-                  <div data-aos="zoom-in">
-                    <TechnologyExperience
-                      formData={formData}
-                      handleChange={handleChange}
-                    />
-                  </div>
-                )}
-                {step === 3 && (
-                  <div data-aos="zoom-in">
-                    <OrganizationInformation
-                      formData={formData}
-                      handleChange={handleChange}
-                    />
-                  </div>
-                )}
-
-                {error && <p className="text-danger">{error}</p>}
-                <div className="d-flex justify-content-between">
-                  {step > 1 && (
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      onClick={handlePrevious}
-                    >
-                      Previous
-                    </button>
-                  )}
-                  {step < 3 && (
-                    <button
-                      type="button"
-                      className="btn btn-primary"
-                      onClick={handleNext}
-                    >
-                      Next
-                    </button>
-                  )}
-                  {step === 3 && (
-                    <button type="submit" className="btn btn-primary border-0">
-                      Signup
-                    </button>
-                  )}
-                </div>
-              </form>
+              {renderSignupForm()}
             </div>
           </div>
         </div>
