@@ -5,12 +5,9 @@ const CompanySocials = ({ formData, handleChange }) => {
     <div>
       <h5>organization Social Media.</h5>
       <div className="mb-3">
-        <label htmlFor="linkedin" className="form-label">
-          linkedIn
-        </label>
+        <label htmlFor="linkedin">linkedIn</label>
         <input
           type="text"
-          className="form-control"
           id="linkedin"
           name="linkedin"
           value={formData.linkedin}
@@ -19,12 +16,9 @@ const CompanySocials = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="youtube" className="form-label">
-          YouTube
-        </label>
+        <label htmlFor="youtube">YouTube</label>
         <input
           type="text"
-          className="form-control"
           id="youtube"
           name="youtube"
           value={formData.youtube}
@@ -32,12 +26,9 @@ const CompanySocials = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="others" className="form-label">
-          Others
-        </label>
+        <label htmlFor="others">Others</label>
         <input
           type="text"
-          className="form-control"
           id="others"
           name="others"
           value={formData.others}

@@ -5,12 +5,9 @@ const Orginfo2 = ({ formData, handleChange }) => {
     <div>
       <h5>Organization Information.</h5>
       <div className="mb-3">
-        <label htmlFor="company_description" className="form-label">
-          Organisation Description
-        </label>
+        <label htmlFor="company_description">Organisation Description</label>
         <input
           type="text"
-          className="form-control"
           id="company_description"
           name="company_description"
           value={formData.company_description}
@@ -20,12 +17,9 @@ const Orginfo2 = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="company_logo" className="form-label">
-          Logo
-        </label>
+        <label htmlFor="company_logo">Logo</label>
         <input
           type="file"
-          className="form-control"
           id="company_logo"
           name="company_logo"
           value={formData.company_logo}
@@ -34,12 +28,9 @@ const Orginfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_business_type" className="form-label">
-          Business Type
-        </label>
+        <label htmlFor="company_business_type">Business Type</label>
         <input
           type="text"
-          className="form-control"
           id="company_business_type"
           name="company_business_type"
           value={formData.company_business_type}
@@ -48,12 +39,9 @@ const Orginfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_industry" className="form-label">
-          Organization Industry
-        </label>
+        <label htmlFor="company_industry">Organization Industry</label>
         <input
           type="text"
-          className="form-control"
           id="company_industry"
           name="company_industry"
           value={formData.company_industry}
@@ -62,12 +50,11 @@ const Orginfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_date_of_incorperation" className="form-label">
+        <label htmlFor="company_date_of_incorperation">
           Date of Incorporation
         </label>
         <input
           type="email"
-          className="form-control"
           id="company_date_of_incorperation"
           name="company_date_of_incorperation"
           value={formData.company_date_of_incorperation}

@@ -4,13 +4,10 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
   return (
     <div>
       <h5>Personal Information.</h5>
-      <div className="mb-3">
-        <label htmlFor="fullname" className="form-label">
-          Fullname
-        </label>
+      <div className="mb-3 input-box">
+        <label htmlFor="fullname">Fullname</label>
         <input
           type="text"
-          className="form-control"
           id="fullname"
           name="fullname"
           value={formData.fullname}
@@ -19,27 +16,22 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
         />
       </div>
 
-      <div className="mb-3">
-        <label htmlFor="username" className="form-label">
-          Username
-        </label>
+      <div className="mb-3 input-box">
+        <label htmlFor="username">Username</label>
         <input
           type="text"
-          className="form-control"
           id="username"
           name="username"
+          className="border-bottom"
           value={formData.username}
           onChange={handleChange}
           required
         />
       </div>
-      <div className="mb-3">
-        <label htmlFor="email" className="form-label">
-          Email
-        </label>
+      <div className="mb-3 input-box">
+        <label htmlFor="email">Email</label>
         <input
           type="email"
-          className="form-control"
           id="email"
           name="email"
           value={formData.email}
@@ -47,13 +39,10 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
           required
         />
       </div>
-      <div className="mb-3">
-        <label htmlFor="phone1" className="form-label">
-          Phone Number One
-        </label>
+      <div className="mb-3 input-box">
+        <label htmlFor="phone1">Phone Number One</label>
         <input
           type="text"
-          className="form-control"
           id="phone1"
           name="phone1"
           value={formData.phone1}
@@ -61,13 +50,10 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
           required
         />
       </div>
-      <div className="mb-3">
-        <label htmlFor="phone2" className="form-label">
-          Phone Number Two
-        </label>
+      <div className="mb-3 input-box">
+        <label htmlFor="phone2">Phone Number Two</label>
         <input
           type="text"
-          className="form-control"
           id="phone2"
           name="phone2"
           value={formData.phone2}

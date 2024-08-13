@@ -5,12 +5,9 @@ const CompanySecurity = ({ formData, handleChange }) => {
     <div>
       <h5>Username & Password.</h5>
       <div className="mb-3">
-        <label htmlFor="desired_username" className="form-label">
-          Desired Username
-        </label>
+        <label htmlFor="desired_username">Desired Username</label>
         <input
           type="text"
-          className="form-control"
           id="desired_username"
           name="desired_username"
           value={formData.desired_username}
@@ -20,12 +17,9 @@ const CompanySecurity = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
-          className="form-control"
           id="password"
           name="password"
           value={formData.password}
@@ -34,12 +28,9 @@ const CompanySecurity = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="confirm_password" className="form-label">
-          Confirm Password
-        </label>
+        <label htmlFor="confirm_password">Confirm Password</label>
         <input
           type="password"
-          className="form-control"
           id="confirm_password"
           name="confirm_password"
           value={formData.confirm_password}

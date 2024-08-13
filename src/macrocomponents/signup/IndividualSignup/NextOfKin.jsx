@@ -5,12 +5,9 @@ const NextOfKin = ({ formData, handleChange }) => {
     <div>
       <h5>Next Of Kin.</h5>
       <div className="mb-3">
-        <label htmlFor="nok_fullname" className="form-label">
-          Fullname
-        </label>
+        <label htmlFor="nok_fullname">Fullname</label>
         <input
           type="text"
-          className="form-control"
           id="nok_fullname"
           name="nok_fullname"
           value={formData.nok_fullname}
@@ -20,12 +17,9 @@ const NextOfKin = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="nok_relationship" className="form-label">
-          Relationship
-        </label>
+        <label htmlFor="nok_relationship">Relationship</label>
         <input
           type="text"
-          className="form-control"
           id="nok_relationship"
           name="nok_relationship"
           value={formData.nok_relationship}
@@ -35,12 +29,9 @@ const NextOfKin = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="nok_phone" className="form-label">
-          Phone Number
-        </label>
+        <label htmlFor="nok_phone">Phone Number</label>
         <input
           type="text"
-          className="form-control"
           id="nok_phone"
           name="nok_phone"
           value={formData.nok_phone}
@@ -49,12 +40,9 @@ const NextOfKin = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="nok_email" className="form-label">
-          Email
-        </label>
+        <label htmlFor="nok_email">Email</label>
         <input
           type="email"
-          className="form-control"
           id="nok_email"
           name="nok_email"
           value={formData.nok_email}
@@ -63,12 +51,9 @@ const NextOfKin = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="nok_address" className="form-label">
-          Address
-        </label>
+        <label htmlFor="nok_address">Address</label>
         <input
           type="text"
-          className="form-control"
           id="nok_address"
           name="nok_address"
           value={formData.nok_address}

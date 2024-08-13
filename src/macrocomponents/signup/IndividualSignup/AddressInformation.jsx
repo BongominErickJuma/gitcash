@@ -5,12 +5,9 @@ const AddressInformation = ({ formData, handleChange }) => {
     <div>
       <h5>Address Information.</h5>
       <div className="mb-3">
-        <label htmlFor="address" className="form-label">
-          Address
-        </label>
+        <label htmlFor="address">Address</label>
         <input
           type="text"
-          className="form-control"
           id="address"
           name="address"
           value={formData.address}
@@ -20,12 +17,9 @@ const AddressInformation = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="city" className="form-label">
-          City
-        </label>
+        <label htmlFor="city">City</label>
         <input
           type="text"
-          className="form-control"
           id="city"
           name="city"
           value={formData.city}
@@ -34,12 +28,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="state" className="form-label">
-          State
-        </label>
+        <label htmlFor="state">State</label>
         <input
           type="text"
-          className="form-control"
           id="state"
           name="state"
           value={formData.state}
@@ -48,12 +39,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="zipCode" className="form-label">
-          Zip Code
-        </label>
+        <label htmlFor="zipCode">Zip Code</label>
         <input
           type="text"
-          className="form-control"
           id="zipCode"
           name="zipCode"
           value={formData.zipCode}
@@ -62,12 +50,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="country" className="form-label">
-          Country
-        </label>
+        <label htmlFor="country">Country</label>
         <input
           type="text"
-          className="form-control"
           id="country"
           name="country"
           value={formData.country}
@@ -76,12 +61,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="permanent_address" className="form-label">
-          Permanent Address
-        </label>
+        <label htmlFor="permanent_address">Permanent Address</label>
         <input
           type="text"
-          className="form-control"
           id="permanent_address"
           name="permanent_address"
           value={formData.permanent_address}
