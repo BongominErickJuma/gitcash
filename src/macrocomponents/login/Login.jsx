@@ -37,12 +37,9 @@ const Login = () => {
               <h2 className="card-title text-start">Log in to Gitcash</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3" data-aos="zoom-in">
-                  <label htmlFor="email" className="form-label">
-                    Email address
-                  </label>
+                  <label htmlFor="email">Email address</label>
                   <input
                     type="email"
-                    className="form-control"
                     id="email"
                     name="email"
                     value={formData.email}
@@ -51,12 +48,9 @@ const Login = () => {
                   />
                 </div>
                 <div className="mb-3" data-aos="zoom-in">
-                  <label htmlFor="password" className="form-label">
-                    Password
-                  </label>
+                  <label htmlFor="password">Password</label>
                   <input
                     type="password"
-                    className="form-control"
                     id="password"
                     name="password"
                     value={formData.password}

@@ -5,12 +5,11 @@ const AcademicBackground = ({ formData, handleChange }) => {
     <div>
       <h5>Academic Information.</h5>
       <div className="mb-3">
-        <label htmlFor="highest_level_of_education" className="form-label">
+        <label htmlFor="highest_level_of_education">
           Highest level of Education
         </label>
         <input
           type="text"
-          className="form-control"
           id="highest_level_of_education"
           name="highest_level_of_education"
           value={formData.highest_level_of_education}
@@ -20,12 +19,9 @@ const AcademicBackground = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="field_of_study" className="form-label">
-          Field of Study
-        </label>
+        <label htmlFor="field_of_study">Field of Study</label>
         <input
           type="text"
-          className="form-control"
           id="field_of_study"
           name="field_of_study"
           value={formData.field_of_study}
@@ -34,12 +30,9 @@ const AcademicBackground = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="educational_institution" className="form-label">
-          Educational Institution
-        </label>
+        <label htmlFor="educational_institution">Educational Institution</label>
         <input
           type="text"
-          className="form-control"
           id="educational_institution"
           name="educational_institution"
           value={formData.educational_institution}
@@ -48,12 +41,9 @@ const AcademicBackground = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="graduation_year" className="form-label">
-          Graduation year
-        </label>
+        <label htmlFor="graduation_year">Graduation year</label>
         <input
           type="text"
-          className="form-control"
           id="graduation_year"
           name="graduation_year"
           value={formData.graduation_year}
@@ -62,12 +52,11 @@ const AcademicBackground = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="academic_document_upload" className="form-label">
+        <label htmlFor="academic_document_upload">
           Upload Academic Document
         </label>
         <input
           type="file"
-          className="form-control"
           id="academic_document_upload"
           name="academic_document_upload"
           value={formData.academic_document_upload}
@@ -76,12 +65,11 @@ const AcademicBackground = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="additional_document_upload" className="form-label">
+        <label htmlFor="additional_document_upload">
           Upload Any Other Document
         </label>
         <input
           type="file"
-          className="form-control"
           id="additional_document_upload"
           name="additional_document_upload"
           value={formData.additional_document_upload}

@@ -1822,3 +1822,38 @@ section,
   right: -2.5rem;
   border-radius: 0.5rem 0.5rem 3rem 0.5rem;
 }
+
+/* INPUTS */
+
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff3cd;
+  background: transparent;
+  color: #303030;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  padding: 0.5em 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em 0;
+  pointer-events: none;
+  transition: 0.5s;
+  font-weight: 100 !important;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -1.5rem;
+  left: 0;
+  font-size: 0.75rem;
+}

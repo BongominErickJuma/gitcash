@@ -5,12 +5,11 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
     <div>
       <h5>Legal And Social Details.</h5>
       <div className="mb-3">
-        <label htmlFor="tax_identification_number" className="form-label">
+        <label htmlFor="tax_identification_number">
           Tax Identification number (TIN)
         </label>
         <input
           type="text"
-          className="form-control"
           id="tax_identification_number"
           name="tax_identification_number"
           value={formData.tax_identification_number}
@@ -20,12 +19,9 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="social_security_number" className="form-label">
-          Social Security Number
-        </label>
+        <label htmlFor="social_security_number">Social Security Number</label>
         <input
           type="text"
-          className="form-control"
           id="social_security_number"
           name="social_security_number"
           value={formData.social_security_number}
@@ -34,12 +30,9 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="criminal_record" className="form-label">
-          Criminal Record
-        </label>
+        <label htmlFor="criminal_record">Criminal Record</label>
         <input
           type="text"
-          className="form-control"
           id="criminal_record"
           name="criminal_record"
           value={formData.criminal_record}
@@ -47,15 +40,11 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label
-          htmlFor="criminal_record_clearence_upload"
-          className="form-label"
-        >
+        <label htmlFor="criminal_record_clearence_upload">
           Criminal Clearance File Upload
         </label>
         <input
           type="file"
-          className="form-control"
           id="criminal_record_clearence_upload"
           name="criminal_record_clearence_upload"
           value={formData.criminal_record_clearence_upload}
@@ -64,12 +53,12 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
       </div>
       <h5>Social Media Profile</h5>
       {/* <div className="mb-3">
-        <label htmlFor="social_media_profile" className="form-label">
+        <label htmlFor="social_media_profile" >
           Facebook
         </label>
         <input
           type="text"
-          className="form-control"
+          
           id="social_media_profile"
           name="social_media_profile"
           value={formData.social_media_profile.facebook}

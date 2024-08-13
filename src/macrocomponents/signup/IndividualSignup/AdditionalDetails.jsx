@@ -5,12 +5,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
     <div>
       <h5>Additional Details.</h5>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_name" className="form-label">
-          Emergency Contact Name
-        </label>
+        <label htmlFor="emergency_contact_name">Emergency Contact Name</label>
         <input
           type="text"
-          className="form-control"
           id="emergency_contact_name"
           name="emergency_contact_name"
           value={formData.emergency_contact_name}
@@ -20,12 +17,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="emergency_contact_relationship" className="form-label">
-          Relationship
-        </label>
+        <label htmlFor="emergency_contact_relationship">Relationship</label>
         <input
           type="text"
-          className="form-control"
           id="emergency_contact_relationship"
           name="emergency_contact_relationship"
           value={formData.emergency_contact_relationship}
@@ -34,12 +28,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_phone" className="form-label">
-          Emergency Contact phone
-        </label>
+        <label htmlFor="emergency_contact_phone">Emergency Contact phone</label>
         <input
           type="text"
-          className="form-control"
           id="emergency_contact_phone"
           name="emergency_contact_phone"
           value={formData.emergency_contact_phone}
@@ -47,12 +38,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_email" className="form-label">
-          Emergency Contact Email
-        </label>
+        <label htmlFor="emergency_contact_email">Emergency Contact Email</label>
         <input
           type="text"
-          className="form-control"
           id="emergency_contact_email"
           name="emergency_contact_email"
           value={formData.emergency_contact_email}
@@ -61,12 +49,11 @@ const AdditionalDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_address" className="form-label">
+        <label htmlFor="emergency_contact_address">
           Emergency Contact Address
         </label>
         <input
           type="text"
-          className="form-control"
           id="emergency_contact_address"
           name="emergency_contact_address"
           value={formData.emergency_contact_address}

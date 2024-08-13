@@ -5,12 +5,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
     <div>
       <h5>Personal Information.</h5>
       <div className="mb-3">
-        <label htmlFor="date_of_birth" className="form-label">
-          Date of Birth
-        </label>
+        <label htmlFor="date_of_birth">Date of Birth</label>
         <input
           type="text"
-          className="form-control"
           id="date_of_birth"
           name="date_of_birth"
           value={formData.date_of_birth}
@@ -19,12 +16,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="gender" className="form-label">
-          Gender
-        </label>
+        <label htmlFor="gender">Gender</label>
         <input
           type="text"
-          className="form-control"
           id="gender"
           name="gender"
           value={formData.gender}
@@ -33,12 +27,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="nationality" className="form-label">
-          Nationality
-        </label>
+        <label htmlFor="nationality">Nationality</label>
         <input
           type="text"
-          className="form-control"
           id="nationality"
           name="nationality"
           value={formData.nationality}
@@ -47,12 +38,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="marital_status" className="form-label">
-          Marital Status
-        </label>
+        <label htmlFor="marital_status">Marital Status</label>
         <input
           type="text"
-          className="form-control"
           id="marital_status"
           name="marital_status"
           value={formData.marital_status}
@@ -61,12 +49,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
-          className="form-control"
           id="password"
           name="password"
           value={formData.password}
@@ -75,12 +60,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="confirm_password" className="form-label">
-          Confirm Password
-        </label>
+        <label htmlFor="confirm_password">Confirm Password</label>
         <input
           type="password"
-          className="form-control"
           id="confirm_password"
           name="confirm_password"
           value={formData.confirm_password}

@@ -5,12 +5,9 @@ const PrimaryContactPerson = ({ formData, handleChange }) => {
     <div>
       <h5>Primary Contact Person.</h5>
       <div className="mb-3">
-        <label htmlFor="primary_contact_person_name" className="form-label">
-          Fullname
-        </label>
+        <label htmlFor="primary_contact_person_name">Fullname</label>
         <input
           type="text"
-          className="form-control"
           id="primary_contact_person_name"
           name="primary_contact_person_name"
           value={formData.primary_contact_person_name}
@@ -20,15 +17,9 @@ const PrimaryContactPerson = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label
-          htmlFor="primary_contact_person_job_title"
-          className="form-label"
-        >
-          Job Title
-        </label>
+        <label htmlFor="primary_contact_person_job_title">Job Title</label>
         <input
           type="text"
-          className="form-control"
           id="primary_contact_person_job_title"
           name="primary_contact_person_job_title"
           value={formData.primary_contact_person_job_title}
@@ -37,12 +28,9 @@ const PrimaryContactPerson = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="primary_contact_person_email" className="form-label">
-          Email
-        </label>
+        <label htmlFor="primary_contact_person_email">Email</label>
         <input
           type="email"
-          className="form-control"
           id="primary_contact_person_email"
           name="primary_contact_person_email"
           value={formData.primary_contact_person_email}
@@ -51,12 +39,9 @@ const PrimaryContactPerson = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="primary_contact_person_phone" className="form-label">
-          Phone
-        </label>
+        <label htmlFor="primary_contact_person_phone">Phone</label>
         <input
           type="text"
-          className="form-control"
           id="primary_contact_person_phone"
           name="primary_contact_person_phone"
           value={formData.primary_contact_person_phone}
@@ -66,12 +51,9 @@ const PrimaryContactPerson = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="primary_contact_person_address" className="form-label">
-          Address
-        </label>
+        <label htmlFor="primary_contact_person_address">Address</label>
         <input
           type="text"
-          className="form-control"
           id="primary_contact_person_address"
           name="primary_contact_person_address"
           value={formData.primary_contact_person_address}

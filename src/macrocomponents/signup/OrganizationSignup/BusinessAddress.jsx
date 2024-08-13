@@ -5,12 +5,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
     <div>
       <h5>Business Address.</h5>
       <div className="mb-3">
-        <label htmlFor="business_address_street" className="form-label">
-          Address
-        </label>
+        <label htmlFor="business_address_street">Address</label>
         <input
           type="text"
-          className="form-control"
           id="business_address_street"
           name="business_address_street"
           value={formData.business_address_street}
@@ -20,12 +17,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="business_address_city" className="form-label">
-          City
-        </label>
+        <label htmlFor="business_address_city">City</label>
         <input
           type="text"
-          className="form-control"
           id="business_address_city"
           name="business_address_city"
           value={formData.business_address_city}
@@ -34,12 +28,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="business_address_state" className="form-label">
-          State
-        </label>
+        <label htmlFor="business_address_state">State</label>
         <input
           type="text"
-          className="form-control"
           id="business_address_state"
           name="business_address_state"
           value={formData.business_address_state}
@@ -48,12 +39,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="business_address_country" className="form-label">
-          Country
-        </label>
+        <label htmlFor="business_address_country">Country</label>
         <input
           type="text"
-          className="form-control"
           id="business_address_country"
           name="business_address_country"
           value={formData.business_address_country}
@@ -63,12 +51,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="business_address_postal_code" className="form-label">
-          Postal Address
-        </label>
+        <label htmlFor="business_address_postal_code">Postal Address</label>
         <input
           type="text"
-          className="form-control"
           id="business_address_postal_code"
           name="business_address_postal_code"
           value={formData.business_address_postal_code}

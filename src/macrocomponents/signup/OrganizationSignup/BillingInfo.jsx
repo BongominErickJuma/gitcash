@@ -5,12 +5,9 @@ const BillingInfo = ({ formData, handleChange }) => {
     <div>
       <h5>Billing Information </h5>
       <div className="mb-3">
-        <label htmlFor="billing_mobile_money" className="form-label">
-          Billing Mobile Money
-        </label>
+        <label htmlFor="billing_mobile_money">Billing Mobile Money</label>
         <input
           type="text"
-          className="form-control"
           id="billing_mobile_money"
           name="billing_mobile_money"
           value={formData.billing_mobile_money}
@@ -20,12 +17,9 @@ const BillingInfo = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="billing_card" className="form-label">
-          Billing Card
-        </label>
+        <label htmlFor="billing_card">Billing Card</label>
         <input
           type="text"
-          className="form-control"
           id="billing_card"
           name="billing_card"
           value={formData.billing_card}
