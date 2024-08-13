@@ -5,7 +5,9 @@ const AddressInformation = ({ formData, handleChange }) => {
     <div>
       <h5>Address Information.</h5>
       <div className="mb-3">
-        <label htmlFor="address">Address</label>
+        <label htmlFor="address">
+          <i className="bi bi-geo-alt-fill me-2"></i> Address
+        </label>
         <input
           type="text"
           id="address"
@@ -17,7 +19,9 @@ const AddressInformation = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="city">City</label>
+        <label htmlFor="city">
+          <i className="bi bi-building me-2"></i> City
+        </label>
         <input
           type="text"
           id="city"
@@ -28,7 +32,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="state">State</label>
+        <label htmlFor="state">
+          <i className="bi bi-map me-2"></i> State
+        </label>
         <input
           type="text"
           id="state"
@@ -39,7 +45,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="zipCode">Zip Code</label>
+        <label htmlFor="zipCode">
+          <i className="bi bi-mailbox me-2"></i> Zip Code
+        </label>
         <input
           type="text"
           id="zipCode"
@@ -50,7 +58,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="country">Country</label>
+        <label htmlFor="country">
+          <i className="bi bi-globe me-2"></i> Country
+        </label>
         <input
           type="text"
           id="country"
@@ -61,7 +71,9 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="permanent_address">Permanent Address</label>
+        <label htmlFor="permanent_address">
+          <i className="bi bi-house-fill me-2"></i> Permanent Address
+        </label>
         <input
           type="text"
           id="permanent_address"

@@ -5,7 +5,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
     <div>
       <h5>Additional Details.</h5>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_name">Emergency Contact Name</label>
+        <label htmlFor="emergency_contact_name">
+          <i className="bi bi-person-fill me-2"></i> Emergency Contact Name
+        </label>
         <input
           type="text"
           id="emergency_contact_name"
@@ -17,7 +19,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="emergency_contact_relationship">Relationship</label>
+        <label htmlFor="emergency_contact_relationship">
+          <i className="bi bi-people-fill me-2"></i> Relationship
+        </label>
         <input
           type="text"
           id="emergency_contact_relationship"
@@ -28,7 +32,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_phone">Emergency Contact phone</label>
+        <label htmlFor="emergency_contact_phone">
+          <i className="bi bi-telephone-fill me-2"></i> Emergency Contact Phone
+        </label>
         <input
           type="text"
           id="emergency_contact_phone"
@@ -38,7 +44,9 @@ const AdditionalDetails = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="emergency_contact_email">Emergency Contact Email</label>
+        <label htmlFor="emergency_contact_email">
+          <i className="bi bi-envelope-fill me-2"></i> Emergency Contact Email
+        </label>
         <input
           type="text"
           id="emergency_contact_email"
@@ -50,7 +58,7 @@ const AdditionalDetails = ({ formData, handleChange }) => {
       </div>
       <div className="mb-3">
         <label htmlFor="emergency_contact_address">
-          Emergency Contact Address
+          <i className="bi bi-geo-alt-fill me-2"></i> Emergency Contact Address
         </label>
         <input
           type="text"

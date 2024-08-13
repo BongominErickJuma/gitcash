@@ -6,7 +6,7 @@ const Companies = () => {
       <div className="container">
         <div
           className="row justify-content-center"
-          data-aos="zoom-in"
+          data-aos="fade-left"
           data-aos-delay="100"
         >
           <div className="col-xl-12">

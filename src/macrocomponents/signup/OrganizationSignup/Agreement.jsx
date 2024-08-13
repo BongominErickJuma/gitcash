@@ -5,7 +5,10 @@ const Agreement = ({ formData, handleChange }) => {
     <div>
       <h5>Legal Agreement.</h5>
       <div className="mb-3">
-        <label htmlFor="terms_and_conditions">Terms And Conditions</label>
+        <label htmlFor="terms_and_conditions">
+          <i className="bi bi-file-earmark-text-fill me-2"></i> Terms And
+          Conditions
+        </label>
         <input
           type="text"
           id="terms_and_conditions"
@@ -17,7 +20,9 @@ const Agreement = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="privacy_policy">Privacy Policy</label>
+        <label htmlFor="privacy_policy">
+          <i className="bi bi-shield-lock-fill me-2"></i> Privacy Policy
+        </label>
         <input
           type="text"
           id="privacy_policy"

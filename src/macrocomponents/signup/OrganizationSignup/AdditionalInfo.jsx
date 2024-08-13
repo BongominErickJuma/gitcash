@@ -6,7 +6,8 @@ const AdditionalInfo = ({ formData, handleChange }) => {
       <h5>Additional Information.</h5>
       <div className="mb-3">
         <label htmlFor="prefered_communication_method">
-          Preferred Communication Method
+          <i className="bi bi-chat-dots-fill me-2"></i> Preferred Communication
+          Method
         </label>
         <input
           type="text"
@@ -19,7 +20,9 @@ const AdditionalInfo = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="preferred_language">Preferred Language</label>
+        <label htmlFor="preferred_language">
+          <i className="bi bi-translate me-2"></i> Preferred Language
+        </label>
         <input
           type="text"
           id="preferred_language"
@@ -31,7 +34,8 @@ const AdditionalInfo = ({ formData, handleChange }) => {
       </div>
       <div className="mb-3">
         <label htmlFor="how_did_you_hear_about_us">
-          How did you hear about us.
+          <i className="bi bi-megaphone-fill me-2"></i> How did you hear about
+          us
         </label>
         <input
           type="text"
@@ -44,7 +48,9 @@ const AdditionalInfo = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="comment">Comment</label>
+        <label htmlFor="comment">
+          <i className="bi bi-chat-left-text-fill me-2"></i> Comment
+        </label>
         <input
           type="text"
           id="comment"

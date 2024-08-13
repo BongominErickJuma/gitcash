@@ -1837,35 +1837,36 @@ section,
 
 /* INPUTS */
 
-.input-box {
-  position: relative;
+h5 {
+  color: var(--accent-color);
+  margin: 1.25rem 0;
+  font-size: 2rem;
 }
 
-.input-box input {
+input {
   width: 100%;
   outline: none;
   border: none;
-  border-bottom: 1px solid #fff3cd;
+  border-bottom: 1px solid var(--default-color);
   background: transparent;
   color: #303030;
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   padding: 0.5em 0;
+  background-color: transparent !important;
+  color: var(--accent-color);
 }
 
-.input-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.5em 0;
-  pointer-events: none;
-  transition: 0.5s;
+label {
+  font-size: 1.25rem;
   font-weight: 100 !important;
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-  top: -1.5rem;
-  left: 0;
-  font-size: 0.75rem;
+input:valid,
+input:focus {
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.account-page {
+  margin-top: 10vh !important;
 }

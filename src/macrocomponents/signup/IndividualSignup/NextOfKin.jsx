@@ -5,7 +5,9 @@ const NextOfKin = ({ formData, handleChange }) => {
     <div>
       <h5>Next Of Kin.</h5>
       <div className="mb-3">
-        <label htmlFor="nok_fullname">Fullname</label>
+        <label htmlFor="nok_fullname">
+          <i className="bi bi-person-fill me-2"></i> Fullname
+        </label>
         <input
           type="text"
           id="nok_fullname"
@@ -17,7 +19,9 @@ const NextOfKin = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="nok_relationship">Relationship</label>
+        <label htmlFor="nok_relationship">
+          <i className="bi bi-people-fill me-2"></i> Relationship
+        </label>
         <input
           type="text"
           id="nok_relationship"
@@ -29,7 +33,9 @@ const NextOfKin = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="nok_phone">Phone Number</label>
+        <label htmlFor="nok_phone">
+          <i className="bi bi-telephone-fill me-2"></i> Phone Number
+        </label>
         <input
           type="text"
           id="nok_phone"
@@ -40,7 +46,9 @@ const NextOfKin = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="nok_email">Email</label>
+        <label htmlFor="nok_email">
+          <i className="bi bi-envelope-fill me-2"></i> Email
+        </label>
         <input
           type="email"
           id="nok_email"
@@ -51,7 +59,9 @@ const NextOfKin = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="nok_address">Address</label>
+        <label htmlFor="nok_address">
+          <i className="bi bi-geo-alt-fill me-2"></i> Address
+        </label>
         <input
           type="text"
           id="nok_address"

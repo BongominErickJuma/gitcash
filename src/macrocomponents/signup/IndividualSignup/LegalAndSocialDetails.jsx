@@ -6,7 +6,8 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
       <h5>Legal And Social Details.</h5>
       <div className="mb-3">
         <label htmlFor="tax_identification_number">
-          Tax Identification number (TIN)
+          <i className="bi bi-file-earmark-text-fill me-2"></i> Tax
+          Identification Number (TIN)
         </label>
         <input
           type="text"
@@ -17,55 +18,6 @@ const LegalAndSocialDetails = ({ formData, handleChange }) => {
           required
         />
       </div>
-
-      <div className="mb-3">
-        <label htmlFor="social_security_number">Social Security Number</label>
-        <input
-          type="text"
-          id="social_security_number"
-          name="social_security_number"
-          value={formData.social_security_number}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="criminal_record">Criminal Record</label>
-        <input
-          type="text"
-          id="criminal_record"
-          name="criminal_record"
-          value={formData.criminal_record}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="criminal_record_clearence_upload">
-          Criminal Clearance File Upload
-        </label>
-        <input
-          type="file"
-          id="criminal_record_clearence_upload"
-          name="criminal_record_clearence_upload"
-          value={formData.criminal_record_clearence_upload}
-          onChange={handleChange}
-        />
-      </div>
-      <h5>Social Media Profile</h5>
-      {/* <div className="mb-3">
-        <label htmlFor="social_media_profile" >
-          Facebook
-        </label>
-        <input
-          type="text"
-          
-          id="social_media_profile"
-          name="social_media_profile"
-          value={formData.social_media_profile.facebook}
-          onChange={handleChange}
-          required
-        />
-      </div> */}
     </div>
   );
 };

@@ -5,7 +5,9 @@ const OrgInfo1 = ({ formData, handleChange }) => {
     <div>
       <h5>Organization Information.</h5>
       <div className="mb-3">
-        <label htmlFor="company_name">Company Name</label>
+        <label htmlFor="company_name">
+          <i className="bi bi-building me-2"></i> Company Name
+        </label>
         <input
           type="text"
           id="company_name"
@@ -17,7 +19,9 @@ const OrgInfo1 = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="company_registration_number">Registration Number</label>
+        <label htmlFor="company_registration_number">
+          <i className="bi bi-card-checklist me-2"></i> Registration Number
+        </label>
         <input
           type="text"
           id="company_registration_number"
@@ -28,7 +32,9 @@ const OrgInfo1 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_tax_identification_number">TIN</label>
+        <label htmlFor="company_tax_identification_number">
+          <i className="bi bi-file-earmark-text me-2"></i> TIN
+        </label>
         <input
           type="text"
           id="company_tax_identification_number"
@@ -39,7 +45,9 @@ const OrgInfo1 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_phone">Phone Number</label>
+        <label htmlFor="company_phone">
+          <i className="bi bi-telephone-fill me-2"></i> Phone Number
+        </label>
         <input
           type="text"
           id="company_phone"
@@ -50,7 +58,9 @@ const OrgInfo1 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_email">Email</label>
+        <label htmlFor="company_email">
+          <i className="bi bi-envelope-fill me-2"></i> Email
+        </label>
         <input
           type="email"
           id="company_email"
@@ -61,7 +71,9 @@ const OrgInfo1 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_website">Website</label>
+        <label htmlFor="company_website">
+          <i className="bi bi-globe me-2"></i> Website
+        </label>
         <input
           type="text"
           id="company_website"

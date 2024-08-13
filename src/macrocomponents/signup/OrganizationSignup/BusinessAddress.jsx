@@ -5,7 +5,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
     <div>
       <h5>Business Address.</h5>
       <div className="mb-3">
-        <label htmlFor="business_address_street">Address</label>
+        <label htmlFor="business_address_street">
+          <i className="bi bi-geo-alt-fill me-2"></i> Address
+        </label>
         <input
           type="text"
           id="business_address_street"
@@ -17,7 +19,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="business_address_city">City</label>
+        <label htmlFor="business_address_city">
+          <i className="bi bi-building me-2"></i> City
+        </label>
         <input
           type="text"
           id="business_address_city"
@@ -28,7 +32,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="business_address_state">State</label>
+        <label htmlFor="business_address_state">
+          <i className="bi bi-map me-2"></i> State
+        </label>
         <input
           type="text"
           id="business_address_state"
@@ -39,7 +45,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="business_address_country">Country</label>
+        <label htmlFor="business_address_country">
+          <i className="bi bi-globe me-2"></i> Country
+        </label>
         <input
           type="text"
           id="business_address_country"
@@ -51,7 +59,9 @@ const BusinessAddress = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="business_address_postal_code">Postal Address</label>
+        <label htmlFor="business_address_postal_code">
+          <i className="bi bi-envelope-fill me-2"></i> Postal Address
+        </label>
         <input
           type="text"
           id="business_address_postal_code"

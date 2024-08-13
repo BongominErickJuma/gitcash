@@ -5,9 +5,11 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
     <div>
       <h5>Personal Information.</h5>
       <div className="mb-3">
-        <label htmlFor="date_of_birth">Date of Birth</label>
+        <label htmlFor="date_of_birth">
+          <i className="bi bi-calendar-fill me-2"></i> Date of Birth
+        </label>
         <input
-          type="text"
+          type="date"
           id="date_of_birth"
           name="date_of_birth"
           value={formData.date_of_birth}
@@ -16,7 +18,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="gender">Gender</label>
+        <label htmlFor="gender">
+          <i className="bi bi-gender-ambiguous me-2"></i> Gender
+        </label>
         <input
           type="text"
           id="gender"
@@ -27,7 +31,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="nationality">Nationality</label>
+        <label htmlFor="nationality">
+          <i className="bi bi-flag-fill me-2"></i> Nationality
+        </label>
         <input
           type="text"
           id="nationality"
@@ -38,7 +44,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="marital_status">Marital Status</label>
+        <label htmlFor="marital_status">
+          <i className="bi bi-heart-fill me-2"></i> Marital Status
+        </label>
         <input
           type="text"
           id="marital_status"
@@ -49,7 +57,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">
+          <i className="bi bi-lock-fill me-2"></i> Password
+        </label>
         <input
           type="password"
           id="password"
@@ -60,7 +70,9 @@ const PersonalInfo2 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="confirm_password">Confirm Password</label>
+        <label htmlFor="confirm_password">
+          <i className="bi bi-lock-fill me-2"></i> Confirm Password
+        </label>
         <input
           type="password"
           id="confirm_password"

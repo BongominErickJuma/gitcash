@@ -3,9 +3,11 @@ import React from "react";
 const PersonalInfo1 = ({ formData, handleChange }) => {
   return (
     <div>
-      <h5>Personal Information.</h5>
+      <h5 className="mb-3">Personal Information.</h5>
       <div className="mb-3 input-box">
-        <label htmlFor="fullname">Fullname</label>
+        <label htmlFor="fullname">
+          <i className="bi bi-person-fill me-2"></i> Fullname
+        </label>
         <input
           type="text"
           id="fullname"
@@ -17,19 +19,22 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3 input-box">
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">
+          <i className="bi bi-person-badge-fill me-2"></i> Username
+        </label>
         <input
           type="text"
           id="username"
           name="username"
-          className="border-bottom"
           value={formData.username}
           onChange={handleChange}
           required
         />
       </div>
       <div className="mb-3 input-box">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">
+          <i className="bi bi-envelope-fill me-2"></i> Email
+        </label>
         <input
           type="email"
           id="email"
@@ -40,7 +45,9 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3 input-box">
-        <label htmlFor="phone1">Phone Number One</label>
+        <label htmlFor="phone1">
+          <i className="bi bi-telephone-fill me-2"></i> Phone Number One
+        </label>
         <input
           type="text"
           id="phone1"
@@ -51,7 +58,9 @@ const PersonalInfo1 = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3 input-box">
-        <label htmlFor="phone2">Phone Number Two</label>
+        <label htmlFor="phone2">
+          <i className="bi bi-telephone-fill me-2"></i> Phone Number Two
+        </label>
         <input
           type="text"
           id="phone2"

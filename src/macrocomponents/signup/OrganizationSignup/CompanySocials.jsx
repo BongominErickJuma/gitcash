@@ -3,9 +3,11 @@ import React from "react";
 const CompanySocials = ({ formData, handleChange }) => {
   return (
     <div>
-      <h5>organization Social Media.</h5>
+      <h5>Organization Social Media.</h5>
       <div className="mb-3">
-        <label htmlFor="linkedin">linkedIn</label>
+        <label htmlFor="linkedin">
+          <i className="bi bi-linkedin me-2"></i> LinkedIn
+        </label>
         <input
           type="text"
           id="linkedin"
@@ -16,7 +18,9 @@ const CompanySocials = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="youtube">YouTube</label>
+        <label htmlFor="youtube">
+          <i className="bi bi-youtube me-2"></i> YouTube
+        </label>
         <input
           type="text"
           id="youtube"
@@ -26,7 +30,9 @@ const CompanySocials = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="others">Others</label>
+        <label htmlFor="others">
+          <i className="bi bi-three-dots me-2"></i> Others
+        </label>
         <input
           type="text"
           id="others"

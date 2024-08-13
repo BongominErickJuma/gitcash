@@ -1,12 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDropzone } from "react-dropzone";
+import "../fileupload.css";
 
-const FileFields = ({ formData, handleChange }) => {
+const FileFields = ({ formData, handleChange, handleFileUpload }) => {
+  const [idCardFrontPreview, setIdCardFrontPreview] = useState(null);
+  const [idCardBackPreview, setIdCardBackPreview] = useState(null);
+  const [photoPreview, setPhotoPreview] = useState(null);
+
+  const onDropIdCardFront = (acceptedFiles) => {
+    const file = acceptedFiles[0];
+    handleFileUpload("identification_card_scan_front", file);
+    const previewUrl = URL.createObjectURL(file);
+    setIdCardFrontPreview(previewUrl);
+  };
+
+  const onDropIdCardBack = (acceptedFiles) => {
+    const file = acceptedFiles[0];
+    handleFileUpload("identification_card_scan_back", file);
+    const previewUrl = URL.createObjectURL(file);
+    setIdCardBackPreview(previewUrl);
+  };
+
+  const onDropPhoto = (acceptedFiles) => {
+    const file = acceptedFiles[0];
+    handleFileUpload("passport_sized_photo", file);
+    const previewUrl = URL.createObjectURL(file);
+    setPhotoPreview(previewUrl);
+  };
+
+  const {
+    getRootProps: getRootPropsIdCardFront,
+    getInputProps: getInputPropsIdCardFront,
+  } = useDropzone({ onDrop: onDropIdCardFront, accept: ".jpg, .jpeg, .png" });
+
+  const {
+    getRootProps: getRootPropsIdCardBack,
+    getInputProps: getInputPropsIdCardBack,
+  } = useDropzone({ onDrop: onDropIdCardBack, accept: ".jpg, .jpeg, .png" });
+
+  const { getRootProps: getRootPropsPhoto, getInputProps: getInputPropsPhoto } =
+    useDropzone({ onDrop: onDropPhoto, accept: ".jpg, .jpeg, .png" });
+
   return (
     <div>
       <h5>National ID or Passport.</h5>
 
       <div className="mb-3">
-        <label htmlFor="identification_number">NIN or Passport Number</label>
+        <label htmlFor="identification_number">
+          <i className="bi bi-card-text me-2"></i> NIN or Passport Number
+        </label>
         <input
           type="text"
           id="identification_number"
@@ -15,27 +57,73 @@ const FileFields = ({ formData, handleChange }) => {
           onChange={handleChange}
         />
       </div>
+
       <div className="mb-3">
-        <label htmlFor="identification_card_scan">
-          National Id or Passport Upload
+        <label htmlFor="identification_card_scan_front">
+          <i className="bi bi-file-earmark-arrow-up-fill me-2"></i> National ID
+          / Passport Front Page Upload
         </label>
-        <input
-          type="file"
-          id="identification_card_scan"
-          name="identification_card_scan"
-          value={formData.identification_card_scan}
-          onChange={handleChange}
-        />
+        <div
+          {...getRootPropsIdCardFront()}
+          className={`dropzone ${idCardFrontPreview ? "with-preview" : ""}`}
+        >
+          <input {...getInputPropsIdCardFront()} />
+          <p>
+            Drag 'n' drop the front page of your ID card here, or click to
+            select a file
+          </p>
+          {idCardFrontPreview && (
+            <img
+              src={idCardFrontPreview}
+              alt="ID Card Front Preview"
+              className="preview-img"
+            />
+          )}
+        </div>
       </div>
+
       <div className="mb-3">
-        <label htmlFor="pasport_sized_photo">Photo</label>
-        <input
-          type="file"
-          id="pasport_sized_photo"
-          name="pasport_sized_photo"
-          value={formData.pasport_sized_photo}
-          onChange={handleChange}
-        />
+        <label htmlFor="identification_card_scan_back">
+          <i className="bi bi-file-earmark-arrow-up-fill me-2"></i> National /
+          Passport Back Page Upload
+        </label>
+        <div
+          {...getRootPropsIdCardBack()}
+          className={`dropzone ${idCardBackPreview ? "with-preview" : ""}`}
+        >
+          <input {...getInputPropsIdCardBack()} />
+          <p>
+            Drag 'n' drop the back page of your ID card here, or click to select
+            a file
+          </p>
+          {idCardBackPreview && (
+            <img
+              src={idCardBackPreview}
+              alt="ID Card Back Preview"
+              className="preview-img"
+            />
+          )}
+        </div>
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="passport_sized_photo">
+          <i className="bi bi-camera-fill me-2"></i> Photo
+        </label>
+        <div
+          {...getRootPropsPhoto()}
+          className={`dropzone ${photoPreview ? "with-preview" : ""}`}
+        >
+          <input {...getInputPropsPhoto()} />
+          <p>Drag 'n' drop your photo here, or click to select a file</p>
+          {photoPreview && (
+            <img
+              src={photoPreview}
+              alt="Photo Preview"
+              className="preview-img"
+            />
+          )}
+        </div>
       </div>
     </div>
   );

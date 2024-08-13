@@ -5,7 +5,9 @@ const ProfessionalInformation = ({ formData, handleChange }) => {
     <div>
       <h5>Professional Information.</h5>
       <div className="mb-3">
-        <label htmlFor="years_of_experience">Years Of Experience</label>
+        <label htmlFor="years_of_experience">
+          <i className="bi bi-briefcase-fill me-2"></i> Years Of Experience
+        </label>
         <input
           type="text"
           id="years_of_experience"
@@ -17,7 +19,9 @@ const ProfessionalInformation = ({ formData, handleChange }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="area_of_experience">Area Of Experience</label>
+        <label htmlFor="area_of_experience">
+          <i className="bi bi-gear-fill me-2"></i> Area Of Experience
+        </label>
         <input
           type="text"
           id="area_of_experience"
@@ -28,40 +32,9 @@ const ProfessionalInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="company_name">Company Name</label>
-        <input
-          type="text"
-          id="company_name"
-          name="company_name"
-          value={formData.company_name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="job_title">Job Title</label>
-        <input
-          type="text"
-          id="job_title"
-          name="job_title"
-          value={formData.job_title}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="resume_upload">Upload Resume</label>
-        <input
-          type="file"
-          id="resume_upload"
-          name="resume_upload"
-          value={formData.resume_upload}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="portfolio_link">Portfolio Link</label>
+        <label htmlFor="portfolio_link">
+          <i className="bi bi-link-45deg me-2"></i> Portfolio Link
+        </label>
         <input
           type="text"
           id="portfolio_link"
@@ -72,7 +45,9 @@ const ProfessionalInformation = ({ formData, handleChange }) => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="linkedin_profile">LinkedIn Profile</label>
+        <label htmlFor="linkedin_profile">
+          <i className="bi bi-linkedin me-2"></i> LinkedIn Profile
+        </label>
         <input
           type="text"
           id="linkedin_profile"
