@@ -37,7 +37,7 @@ const Header = () => {
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center me-auto me-lg-0">
-          <h1 className="sitename">GitCash</h1>
+          <h1 className="fs-1">GitCash</h1>
           <span>.</span>
         </Link>
 

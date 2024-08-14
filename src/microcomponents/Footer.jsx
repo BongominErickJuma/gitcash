@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6 footer-about">
               <a href="index.html" className="logo d-flex align-items-center">
-                <span className="sitename">GitCash</span>
+                <span className="fs-1">GitCash.</span>
               </a>
               <div className="footer-contact pt-3">
                 <p>A108 Adam Street</p>
