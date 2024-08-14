@@ -1,6 +1,8 @@
 import React from "react";
 import bg from "../assets/world-dotted-map.png";
 import companyDetails from "./companyDetails";
+import projects from "./projectDetails";
+import Projects from "./Projects";
 
 const Hero = () => {
   return (
@@ -55,19 +57,9 @@ const Hero = () => {
           </form>
         </div>
       </div>
-      <div className="col-xl-12 floating-on-border container  shadow p-0">
-        <div className="p-0">
-          <p className="text-dark fs-4 ps-2 pb-2">Trusted By</p>
-          <div className="company d-flex align-items-center justify-content-between mt-0">
-            {companyDetails.map((company, idx) => (
-              <div className="card w-25 rounded-0" key={idx}>
-                <div className="card-body d-flex align-items-center justify-content-center">
-                  <h6 className="card-title text-center">{company.name}</h6>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="col-xl-12 floating-on-border container p-0">
+        <p className="text-white mb-2 fs-4 ps-2">Top Projects</p>
+        <Projects />
       </div>
     </section>
   );

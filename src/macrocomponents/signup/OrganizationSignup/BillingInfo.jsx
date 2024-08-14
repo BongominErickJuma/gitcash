@@ -4,32 +4,40 @@ const BillingInfo = ({ formData, handleChange }) => {
   return (
     <div>
       <h5>Billing Information</h5>
-      <div className="mb-3">
-        <label htmlFor="billing_mobile_money">
-          <i className="bi bi-phone-fill me-2"></i> Billing Mobile Money
-        </label>
+
+      <div className="form-check form-switch mb-3">
         <input
-          type="text"
-          id="billing_mobile_money"
+          className="form-check-input"
+          type="checkbox"
+          role="switch"
           name="billing_mobile_money"
           value={formData.billing_mobile_money}
           onChange={handleChange}
           required
+          id="flexSwitchCheckDefault"
         />
-      </div>
-
-      <div className="mb-3">
-        <label htmlFor="billing_card">
-          <i className="bi bi-credit-card-fill me-2"></i> Billing Card
+        <label className="form-check-label" for="flexSwitchCheckDefault">
+          <a href="#" className="text-black">
+            Billing Mobile Money
+          </a>
         </label>
+      </div>
+      <div className="form-check form-switch mb-3">
         <input
-          type="text"
-          id="billing_card"
+          className="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckChecked"
           name="billing_card"
           value={formData.billing_card}
           onChange={handleChange}
           required
         />
+        <label className="form-check-label" for="flexSwitchCheckChecked">
+          <a href="#" className="text-black">
+            Billing Card
+          </a>
+        </label>
       </div>
     </div>
   );

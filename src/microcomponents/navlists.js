@@ -1,12 +1,13 @@
 const navlist = [
   {
-    title: "Resources",
+    title: "Commercial Projects",
     href: "#",
     dropitems: [
-      { title: "Resource 1", href: "#" },
-      { title: "Resource 2", href: "#" },
-      { title: "Resource 3", href: "#" },
-      { title: "Resource 4", href: "#" },
+      { title: "Websites", href: "#" },
+      { title: "Dashboards", href: "#" },
+      { title: "APIS", href: "#" },
+      { title: "Android / IOS", href: "#" },
+      { title: "Desktop Apps", href: "#" },
     ],
   },
   {

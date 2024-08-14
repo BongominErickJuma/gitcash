@@ -18,44 +18,57 @@ const BusinessAddress = ({ formData, handleChange }) => {
         />
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="business_address_city">
           <i className="bi bi-building me-2"></i> City
         </label>
-        <input
-          type="text"
+
+        <select
+          className="form-select mt-3"
           id="business_address_city"
           name="business_address_city"
           value={formData.business_address_city}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="business_address_state">
           <i className="bi bi-map me-2"></i> State
         </label>
-        <input
-          type="text"
+        <select
+          className="form-select mt-3"
           id="business_address_state"
           name="business_address_state"
           value={formData.business_address_state}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="business_address_country">
           <i className="bi bi-globe me-2"></i> Country
         </label>
-        <input
-          type="text"
+        <select
+          className="form-select mt-3"
           id="business_address_country"
           name="business_address_country"
           value={formData.business_address_country}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
 
       <div className="mb-3">

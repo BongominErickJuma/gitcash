@@ -4,33 +4,40 @@ const LegalAgreements = ({ formData, handleChange }) => {
   return (
     <div>
       <h5>Legal Agreement.</h5>
-      <div className="mb-3">
-        <label htmlFor="terms_and_conditions">
-          <i className="bi bi-file-earmark-text-fill me-2"></i> Terms And
-          Conditions
-        </label>
+
+      <div className="form-check form-switch mb-3">
         <input
-          type="text"
-          id="terms_and_conditions"
+          className="form-check-input"
+          type="checkbox"
+          role="switch"
           name="terms_and_conditions"
           value={formData.terms_and_conditions}
           onChange={handleChange}
           required
+          id="flexSwitchCheckDefault"
         />
-      </div>
-
-      <div className="mb-3">
-        <label htmlFor="privacy_policy">
-          <i className="bi bi-shield-lock-fill me-2"></i> Privacy Policy
+        <label className="form-check-label" for="flexSwitchCheckDefault">
+          <a href="#" className="text-black">
+            Terms And Conditions
+          </a>
         </label>
+      </div>
+      <div className="form-check form-switch mb-3">
         <input
-          type="text"
-          id="privacy_policy"
+          className="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckChecked"
           name="privacy_policy"
           value={formData.privacy_policy}
           onChange={handleChange}
           required
         />
+        <label className="form-check-label" for="flexSwitchCheckChecked">
+          <a href="#" className="text-black">
+            Privacy and Policy
+          </a>
+        </label>
       </div>
     </div>
   );

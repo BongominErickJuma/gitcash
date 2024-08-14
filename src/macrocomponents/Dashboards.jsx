@@ -1,6 +1,6 @@
 import React from "react";
-import codeSnippet from "../assets/local-snippet.png";
-import miniSnippet from "../assets/dash-small.jpg";
+import codeSnippet from "../assets/main-dashboard.jpg";
+import miniSnippet from "../assets/code.png";
 
 const Dashboards = () => {
   return (

@@ -78,32 +78,82 @@ const Signup = () => {
     setBullets([]);
   };
 
+  const individualBenefits = [
+    "Exclusive Content",
+    "Networking",
+    "Personalized Tips",
+    "Discounts",
+  ];
+
+  const organizationBenefits = [
+    "Brand Exposure",
+    "Networking",
+    "Custom Solutions",
+    "Priority Support",
+  ];
+
   const renderSignupForm = () => {
     if (signupType === "individual") {
-      return <IndividualSignup />;
+      return (
+        <div>
+          <IndividualSignup />
+        </div>
+      );
     } else if (signupType === "organization") {
-      return <OrganizationSignup />;
+      return (
+        <div>
+          <OrganizationSignup />
+        </div>
+      );
     } else {
       return (
         <>
-          <div className="col-lg-5 bg-info py-5 px-2">
-            <a
-              className="btn w-100 p-5"
-              onClick={() => handleSignupType("individual")}
-            >
-              <i className="bi bi-person fs-1"></i>
-              <h2>Sign up as Individual</h2>
-            </a>
-          </div>
+          <div className="col-lg-5 account-type">
+            <div className="">
+              <div className="d-flex  align-items-center">
+                <i className="bi bi-person fs-1 me-5"></i>
+                <h2>Individual</h2>
+              </div>
+              <a
+                className="btn bg-info w-100 mt-5"
+                onClick={() => handleSignupType("individual")}
+              >
+                Signup as an Individual
+              </a>
+            </div>
 
-          <div className="col-lg-5 bg-info py-5 px-2">
-            <a
-              className="btn w-100 p-5 "
-              onClick={() => handleSignupType("organization")}
-            >
-              <i className="bi bi-people fs-1"></i>
-              <h2>Sign up as Organization</h2>
-            </a>
+            <div className="">
+              <div className="d-flex  align-items-center">
+                <i className="bi bi-people fs-1 me-5"></i>
+                <h2>Organization</h2>
+              </div>
+
+              <a
+                className="btn w-100 bg-info mt-5"
+                onClick={() => handleSignupType("organization")}
+              >
+                Sign up as an Organization
+              </a>
+            </div>
+          </div>
+          <div className="col-lg-5 account-type">
+            <div className="">
+              <h2>Benefits</h2>
+              <ul>
+                {individualBenefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-5">
+              <h2>Benefits</h2>
+              <ul>
+                {organizationBenefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </>
       );

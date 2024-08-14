@@ -152,73 +152,75 @@ const OrganizationSignup = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {step === 1 && (
-        <div data-aos="fade-left">
-          <OrgInfo1 formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 2 && (
-        <div data-aos="fade-left">
-          <OrgInfo2
-            formData={formData}
-            handleChange={handleChange}
-            handleFileUpload={handleFileUpload}
-          />
-        </div>
-      )}
-      {step === 3 && (
-        <div data-aos="fade-left">
-          <PrimaryContactPerson
-            formData={formData}
-            handleChange={handleChange}
-          />
-        </div>
-      )}
+      <div className="signup-form">
+        {step === 1 && (
+          <div data-aos="fade-left">
+            <OrgInfo1 formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 2 && (
+          <div data-aos="fade-left">
+            <OrgInfo2
+              formData={formData}
+              handleChange={handleChange}
+              handleFileUpload={handleFileUpload}
+            />
+          </div>
+        )}
+        {step === 3 && (
+          <div data-aos="fade-left">
+            <PrimaryContactPerson
+              formData={formData}
+              handleChange={handleChange}
+            />
+          </div>
+        )}
 
-      {step === 4 && (
-        <div data-aos="fade-left">
-          <AlternativeContactPerson
-            formData={formData}
-            handleChange={handleChange}
-          />
-        </div>
-      )}
-      {step === 5 && (
-        <div data-aos="fade-left">
-          <BusinessAddress formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 6 && (
-        <div data-aos="fade-left">
-          <BillingInfo formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 7 && (
-        <div data-aos="fade-left">
-          <CompanySocials formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 8 && (
-        <div data-aos="fade-left">
-          <CompanySecurity formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 9 && (
-        <div data-aos="fade-left">
-          <AdditionalInfo formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 10 && (
-        <div data-aos="fade-left">
-          <Agreement formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {/* {step === 11 && (
+        {step === 4 && (
+          <div data-aos="fade-left">
+            <AlternativeContactPerson
+              formData={formData}
+              handleChange={handleChange}
+            />
+          </div>
+        )}
+        {step === 5 && (
+          <div data-aos="fade-left">
+            <BusinessAddress formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 6 && (
+          <div data-aos="fade-left">
+            <BillingInfo formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 7 && (
+          <div data-aos="fade-left">
+            <CompanySocials formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 8 && (
+          <div data-aos="fade-left">
+            <CompanySecurity formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 9 && (
+          <div data-aos="fade-left">
+            <AdditionalInfo formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 10 && (
+          <div data-aos="fade-left">
+            <Agreement formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {/* {step === 11 && (
         <div data-aos="fade-left">
           <Verification formData={formData} handleChange={handleChange} />
         </div>
       )} */}
-      {error && <p className="text-danger">{error}</p>}
+        {error && <p className="text-danger">{error}</p>}
+      </div>
       <div className="d-flex justify-content-between">
         {step > 1 && (
           <button

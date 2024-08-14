@@ -2,44 +2,56 @@ import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import "./clients.css";
-
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+// Import required modules
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  Mousewheel,
+  Keyboard,
+} from "swiper/modules";
 
 function Clients() {
   return (
-    <>
+    <div className="container my-5 ">
+      <h3>Trusted By:</h3>
       <Swiper
-        spaceBetween={30}
+        loop={true}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 0,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
+        slidesPerView={5} // Ensure this is a number
+        speed={2000}
+        grabCursor={true}
+        mousewheel={true}
+        keyboard={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation, Mousewheel, Keyboard]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {[...Array(9)].map((_, index) => (
+          <SwiperSlide key={index}>
+            <div className="card border-0">
+              <div className="card-body">
+                <h6 className="card-title">Slide {index + 1}</h6>
+                <p className="card-text">
+                  This is a simple card with text content
+                </p>
+                <a href="#" className="btn bg-info">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
-    </>
+    </div>
   );
 }
+
 export default Clients;

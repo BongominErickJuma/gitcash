@@ -18,31 +18,42 @@ const AddressInformation = ({ formData, handleChange }) => {
         />
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="city">
           <i className="bi bi-building me-2"></i> City
         </label>
-        <input
-          type="text"
+
+        <select
+          className="form-select mt-3"
           id="city"
           name="city"
+          aria-label="Default select example"
           value={formData.city}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="state">
           <i className="bi bi-map me-2"></i> State
         </label>
-        <input
-          type="text"
+
+        <select
+          className="form-select mt-3"
           id="state"
           name="state"
           value={formData.state}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
       <div className="mb-3">
         <label htmlFor="zipCode">
@@ -57,18 +68,23 @@ const AddressInformation = ({ formData, handleChange }) => {
           required
         />
       </div>
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="country">
           <i className="bi bi-globe me-2"></i> Country
         </label>
-        <input
-          type="text"
+
+        <select
+          className="form-select mt-3"
           id="country"
           name="country"
           value={formData.country}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
       <div className="mb-3">
         <label htmlFor="permanent_address">

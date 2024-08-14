@@ -140,56 +140,64 @@ const IndividualSignup = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {step === 1 && (
-        <div data-aos="fade-left">
-          <PersonalInfo1 formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 2 && (
-        <div data-aos="fade-left">
-          <PersonalInfo2 formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 3 && (
-        <div data-aos="fade-left">
-          <FileFields
-            formData={formData}
-            handleChange={handleChange}
-            handleFileUpload={handleFileUpload}
-          />
-        </div>
-      )}
+      <div className="signup-form">
+        {step === 1 && (
+          <div data-aos="fade-left">
+            <PersonalInfo1 formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 2 && (
+          <div data-aos="fade-left">
+            <PersonalInfo2 formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 3 && (
+          <div data-aos="fade-left">
+            <FileFields
+              formData={formData}
+              handleChange={handleChange}
+              handleFileUpload={handleFileUpload}
+            />
+          </div>
+        )}
 
-      {step === 4 && (
-        <div data-aos="fade-left">
-          <NextOfKin formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 5 && (
-        <div data-aos="fade-left">
-          <AddressInformation formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 6 && (
-        <div data-aos="fade-left">
-          <AcademicBackground formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {step === 7 && (
-        <div data-aos="fade-left">
-          <ProfessionalInformation
-            formData={formData}
-            handleChange={handleChange}
-          />
-        </div>
-      )}
+        {step === 4 && (
+          <div data-aos="fade-left">
+            <NextOfKin formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {step === 5 && (
+          <div data-aos="fade-left">
+            <AddressInformation
+              formData={formData}
+              handleChange={handleChange}
+            />
+          </div>
+        )}
+        {step === 6 && (
+          <div data-aos="fade-left">
+            <AcademicBackground
+              formData={formData}
+              handleChange={handleChange}
+            />
+          </div>
+        )}
+        {step === 7 && (
+          <div data-aos="fade-left">
+            <ProfessionalInformation
+              formData={formData}
+              handleChange={handleChange}
+            />
+          </div>
+        )}
 
-      {step === 8 && (
-        <div data-aos="fade-left">
-          <LegalAgreements formData={formData} handleChange={handleChange} />
-        </div>
-      )}
-      {error && <p className="text-danger">{error}</p>}
+        {step === 8 && (
+          <div data-aos="fade-left">
+            <LegalAgreements formData={formData} handleChange={handleChange} />
+          </div>
+        )}
+        {error && <p className="text-danger">{error}</p>}
+      </div>
       <div className="d-flex justify-content-between">
         {step > 1 && (
           <button

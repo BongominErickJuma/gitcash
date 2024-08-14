@@ -62,6 +62,9 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
+li {
+  list-style-type: circle;
+}
 
 h1,
 h2,
@@ -79,6 +82,29 @@ h6 {
 .bg-info {
   color: var(--background-color) !important;
   background: var(--accent-color) !important;
+}
+
+.btn-info-outline {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background: var(--background-color);
+  padding: 0.5em 0;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-out;
+}
+.btn-info-outline:hover {
+  color: var(--surface-color) !important;
+  border: none;
+  background: var(--accent-color);
+}
+
+.btn-info-outline i {
+  transition: all 0.3s ease-out;
+}
+
+.btn-info-outline:hover i {
+  margin-left: 1em !important;
 }
 
 /* PHP Email Form Messages
@@ -477,6 +503,16 @@ h6 {
   background-color: var(--accent-color);
 }
 
+.footer .floating-on-border h3 {
+  z-index: 9999999;
+}
+
+.footer .footer-image {
+  position: absolute;
+  top: -20vh;
+  width: 300px;
+  z-index: 9991;
+}
 .footer .footer-top {
   padding: 50px 0;
   background-color: color-mix(
@@ -868,16 +904,13 @@ section,
 
 .hero .floating-on-border {
   width: 100%;
-  height: 8vh !important;
+  height: 18vh !important;
   position: absolute;
-  bottom: -2vh;
-  z-index: 999;
-  background-color: white;
+  bottom: -8vh;
+  z-index: 9;
+  background-color: transparent;
 }
 
-.hero .floating-on-border .card {
-  height: 120px;
-}
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
@@ -1012,27 +1045,28 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features {
+  overflow: visible;
+  margin-bottom: 12em;
+}
 
 .features .image-container {
   position: relative;
   width: 100%;
-  overflow: visible;
-  border: 1px solid red;
 }
 
 .features .features-image .main-img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .features .features-mini-image {
   position: absolute;
   bottom: -10em;
-  right: 2rem;
+  right: 1rem;
   width: 40%;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .features .features-mini-image .mini-img {
@@ -1837,24 +1871,31 @@ section,
 
 /* INPUTS */
 
+.signup-form {
+  min-height: 65vh !important;
+}
+
 h5 {
   color: var(--accent-color);
   margin: 1.25rem 0;
   font-size: 2rem;
 }
 
-input {
+input:not([type="checkbox"]) {
   width: 100%;
   outline: none;
   border: none;
   border-bottom: 1px solid var(--default-color);
-  background: transparent;
-  color: #303030;
-  margin-bottom: 2rem;
   font-size: 1.75rem;
   padding: 0.5em 0;
   background-color: transparent !important;
   color: var(--accent-color);
+  transition: border-bottom 3s;
+}
+
+input[type="checkbox"] {
+  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 label {
@@ -1865,8 +1906,42 @@ label {
 input:valid,
 input:focus {
   border-bottom: 3px solid var(--accent-color);
+  animation: border 2s;
+}
+
+@keyframes border {
+  from {
+    border-bottom: 1px solid var(--default-color);
+  }
+  to {
+    border-bottom: 3px solid var(--accent-color);
+  }
 }
 
 .account-page {
   margin-top: 10vh !important;
+}
+
+/* Custom Switch Color */
+.form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0 var(--accent-color) !important;
+}
+
+.account-type {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+}
+
+/* Projects */
+
+.projects {
+  height: 10px !important;
 }

@@ -1,22 +1,24 @@
 import React from "react";
+import payment from "../assets/payment.png";
 
 const Footer = () => {
   return (
     <footer id="footer" className="footer dark-background">
       <div className="footer-top">
         <div className="container">
-          <div className="col-xl-12 floating-on-border container shadow rounded-4">
-            <div>
-              <h3 className="pt-2">
-                Our AI-powered platform increases the pace of software
-                development.
-              </h3>
-            </div>
+          <div className="col-xl-12 floating-on-border container shadow rounded-4 d-flex align-items-center justify-content-end">
+            <h3 className="pt-2">
+              Our AI-powered platform increases the pace of software
+              development.
+            </h3>
+          </div>
+          <div className="footer-image">
+            <img src={payment} alt="payment" className="d-block w-100" />
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6 footer-about">
               <a href="index.html" className="logo d-flex align-items-center">
-                <span className="sitename">Gitcash</span>
+                <span className="sitename">GitCash</span>
               </a>
               <div className="footer-contact pt-3">
                 <p>A108 Adam Street</p>

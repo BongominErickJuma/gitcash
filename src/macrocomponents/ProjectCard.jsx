@@ -14,16 +14,16 @@ const ProjectCard = ({
   isExternalLink,
 }) => {
   const CardContent = (
-    <div className="card text-white h-100">
+    <div className="card text-white h-100" style={{ backgroundColor: "white" }}>
       <div className="card-body">
-        <div className="d-flex align-items-center mb-3">
+        <div className="d-flex align-items-center">
           <i
             className={`bi ${iconClass} me-2`}
             style={{ fontSize: "2rem", color: tools[0].color }}
           ></i>
-          <h5 className=" mb-0">{title}</h5>
+          <h5 className=" mb-0 fs-6">{title}</h5>
         </div>
-        <p className="text-black">{description}</p>
+        <p className="text-black fs-6">{description}</p>
       </div>
       <div className="card-footer d-flex justify-content-between align-items-center">
         <small className="text-info">{time} ago</small>

@@ -28,20 +28,27 @@ const Orginfo2 = ({ formData, handleChange, handleFileUpload }) => {
   return (
     <div>
       <h5>Organization Information.</h5>
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <label htmlFor="company_description">
           <i className="bi bi-info-circle-fill me-2"></i> Organisation
           Description
-        </label>
-        <input
+        </label> */}
+      {/* <input
           type="text"
           id="company_description"
           name="company_description"
           value={formData.company_description}
           onChange={handleChange}
           required
-        />
-      </div>
+        /> */}
+      {/* <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="floatingTextarea2"
+          style="height: 100px"
+        ></textarea>
+        <label for="floatingTextarea2">Comments</label> */}
+      {/* </div> */}
 
       <div className="mb-3">
         <label htmlFor="company_logo">
@@ -54,7 +61,10 @@ const Orginfo2 = ({ formData, handleChange, handleFileUpload }) => {
           } ${isDragReject ? "drag-reject" : ""}`}
         >
           <input {...getInputProps()} />
-          <p>Drag 'n' drop your logo here, or click to select a file</p>
+          <div className="d-flex flex-column align-items-center justify-content-evently ">
+            <p>Drag 'n' drop here, or click to select a file</p>
+            <i className="bi bi-upload fs-2"></i>
+          </div>
           {logoPreview && (
             <img
               src={logoPreview}
@@ -65,32 +75,41 @@ const Orginfo2 = ({ formData, handleChange, handleFileUpload }) => {
         </div>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="company_business_type">
           <i className="bi bi-briefcase-fill me-2"></i> Business Type
         </label>
-        <input
-          type="text"
+        <select
+          className="form-select mt-3"
           id="company_business_type"
           name="company_business_type"
           value={formData.company_business_type}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <label htmlFor="company_industry">
           <i className="bi bi-building me-2"></i> Organization Industry
         </label>
-        <input
-          type="text"
+
+        <select
+          className="form-select mt-3"
           id="company_industry"
           name="company_industry"
           value={formData.company_industry}
           onChange={handleChange}
-          required
-        />
+        >
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
 
       <div className="mb-3">

@@ -68,10 +68,10 @@ const FileFields = ({ formData, handleChange, handleFileUpload }) => {
           className={`dropzone ${idCardFrontPreview ? "with-preview" : ""}`}
         >
           <input {...getInputPropsIdCardFront()} />
-          <p>
-            Drag 'n' drop the front page of your ID card here, or click to
-            select a file
-          </p>
+          <div className="d-flex flex-column align-items-center justify-content-evently ">
+            <p>Drag 'n' drop here, or click to select a file</p>
+            <i className="bi bi-upload fs-2"></i>
+          </div>
           {idCardFrontPreview && (
             <img
               src={idCardFrontPreview}
@@ -83,7 +83,7 @@ const FileFields = ({ formData, handleChange, handleFileUpload }) => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="identification_card_scan_back">
+        <label htmlFor="identification_card_scan_back ">
           <i className="bi bi-file-earmark-arrow-up-fill me-2"></i> National /
           Passport Back Page Upload
         </label>
@@ -92,10 +92,10 @@ const FileFields = ({ formData, handleChange, handleFileUpload }) => {
           className={`dropzone ${idCardBackPreview ? "with-preview" : ""}`}
         >
           <input {...getInputPropsIdCardBack()} />
-          <p>
-            Drag 'n' drop the back page of your ID card here, or click to select
-            a file
-          </p>
+          <div className="d-flex flex-column align-items-center justify-content-evently ">
+            <p>Drag 'n' drop here, or click to select a file</p>
+            <i className="bi bi-upload fs-2"></i>
+          </div>
           {idCardBackPreview && (
             <img
               src={idCardBackPreview}
@@ -115,7 +115,10 @@ const FileFields = ({ formData, handleChange, handleFileUpload }) => {
           className={`dropzone ${photoPreview ? "with-preview" : ""}`}
         >
           <input {...getInputPropsPhoto()} />
-          <p>Drag 'n' drop your photo here, or click to select a file</p>
+          <div className="d-flex flex-column align-items-center justify-content-evently ">
+            <p>Drag 'n' drop here, or click to select a file</p>
+            <i className="bi bi-upload fs-2"></i>
+          </div>
           {photoPreview && (
             <img
               src={photoPreview}

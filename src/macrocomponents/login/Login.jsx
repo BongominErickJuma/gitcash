@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -62,27 +63,28 @@ const Login = () => {
                 </div>
                 {error && <p className="text-danger">{error}</p>}
 
-                <div
-                  className="mb-3 row d-flex align-items-start"
-                  data-aos="fade-left"
-                >
-                  <input
-                    type="checkbox"
-                    id="remember"
-                    name="remember"
-                    className="col-2 mt-2"
-                  />
-                  <label htmlFor="remember" className="col-10">
-                    Remember Me
-                  </label>
-                </div>
+                <div className="d-flex align-items-start justify-content-between my-4">
+                  <div className="form-check form-switch">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="flexSwitchCheckDefault"
+                    />
+                    <label
+                      className="form-check-label fs-6"
+                      for="flexSwitchCheckDefault"
+                    >
+                      Remember Me
+                    </label>
+                  </div>
 
-                <p>
-                  Have no Account?{" "}
-                  <a href="#" className="ms-2">
-                    Signup
-                  </a>
-                </p>
+                  <p>
+                    No Account?
+                    <Link to="/signup" className="ms-2">
+                      Signup
+                    </Link>
+                  </p>
+                </div>
                 <button
                   type="submit"
                   className="btn btn-primary w-100 border-0"

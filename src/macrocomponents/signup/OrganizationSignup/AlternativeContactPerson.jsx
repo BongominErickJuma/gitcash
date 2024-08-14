@@ -14,7 +14,6 @@ const AlternativeContactPerson = ({ formData, handleChange }) => {
           name="alternative_contact_person_name"
           value={formData.alternative_contact_person_name}
           onChange={handleChange}
-          required
         />
       </div>
 
@@ -28,7 +27,6 @@ const AlternativeContactPerson = ({ formData, handleChange }) => {
           name="alternative_contact_person_job_title"
           value={formData.alternative_contact_person_job_title}
           onChange={handleChange}
-          required
         />
       </div>
       <div className="mb-3">
@@ -41,7 +39,6 @@ const AlternativeContactPerson = ({ formData, handleChange }) => {
           name="alternative_contact_person_email"
           value={formData.alternative_contact_person_email}
           onChange={handleChange}
-          required
         />
       </div>
       <div className="mb-3">
@@ -54,7 +51,6 @@ const AlternativeContactPerson = ({ formData, handleChange }) => {
           name="alternative_contact_person_phone"
           value={formData.alternative_contact_person_phone}
           onChange={handleChange}
-          required
         />
       </div>
 
@@ -68,7 +64,6 @@ const AlternativeContactPerson = ({ formData, handleChange }) => {
           name="alternative_contact_person_address"
           value={formData.alternative_contact_person_address}
           onChange={handleChange}
-          required
         />
       </div>
     </div>
