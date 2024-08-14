@@ -38,13 +38,11 @@ function Clients() {
           <SwiperSlide key={index}>
             <div className="card border-0">
               <div className="card-body">
-                <h6 className="card-title">Slide {index + 1}</h6>
-                <p className="card-text">
-                  This is a simple card with text content
-                </p>
-                <a href="#" className="btn bg-info">
-                  Learn More
-                </a>
+                <img
+                  src={`https://picsum.photos/300/200?random=${index + 1}`}
+                  alt={`Slide ${index + 1}`}
+                  className="card-img-top"
+                />
               </div>
             </div>
           </SwiperSlide>

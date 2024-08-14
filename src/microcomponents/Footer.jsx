@@ -7,10 +7,13 @@ const Footer = () => {
       <div className="footer-top">
         <div className="container">
           <div className="col-xl-12 floating-on-border container shadow rounded-4 d-flex align-items-center justify-content-end">
-            <h3 className="pt-2">
-              Our AI-powered platform increases the pace of software
-              development.
-            </h3>
+            <div className="d-flex align-items-center flex-column">
+              <h3 className="pt-2">
+                Our AI-powered platform increases the pace of software
+                development.
+              </h3>
+              <button className=" btn border w-25">Download</button>
+            </div>
           </div>
           <div className="footer-image">
             <img src={payment} alt="payment" className="d-block w-100" />

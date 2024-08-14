@@ -1923,9 +1923,11 @@ input:focus {
 }
 
 /* Custom Switch Color */
+.form-check-input,
 .form-check-input:checked {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 0 var(--accent-color) !important;
 }
 
 .form-check-input:focus {
