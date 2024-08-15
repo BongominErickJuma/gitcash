@@ -2,7 +2,7 @@ const projects = [
   {
     title: "React Portfolio",
     description: "A personal portfolio website built using React.js.",
-    time: "5d",
+    time: "80.48",
     iconClass: "bi-filetype-js",
     tools: [
       { icon: "bi-filetype-js", color: "#F7DF1E" },
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Node.js REST API",
     description: "A RESTful API built using Node.js and Express.",
-    time: "1w",
+    time: "134.30",
     iconClass: "bi-filetype-js",
     tools: [
       { icon: "bi-filetype-js", color: "#F7DF1E" },
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Bootstrap Landing Page",
     description: "A responsive landing page built using Bootstrap.",
-    time: "2w",
+    time: "67.15",
     iconClass: "bi-filetype-html",
     tools: [
       { icon: "bi-filetype-html", color: "#E34F26" },
@@ -44,7 +44,7 @@ const projects = [
   {
     title: "Java Spring Boot App",
     description: "A web application built using Java Spring Boot.",
-    time: "3w",
+    time: "171.90",
     iconClass: "bi-filetype-java",
     tools: [
       { icon: "bi-filetype-java", color: "#007396" },

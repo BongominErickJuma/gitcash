@@ -7,9 +7,9 @@ const testimonialDetails = [
     articles_desc: "active contributors",
     testimony:
       "The new workflow tools have streamlined our processes and significantly improved our team's efficiency. The results speak for themselves with a remarkable increase in successful deployments.",
-    speaker: "Anna Smith",
-    speaker_position: "Head of Operations",
-    company: "Tech Innovations Inc.",
+    speaker: "Francis Ssessaazi",
+    speaker_position: "Chief Executive Officer",
+    company: "Cognosphere Dynamics LLC",
     profileImage: "https://via.placeholder.com/100?text=Anna+Smith",
   },
   {

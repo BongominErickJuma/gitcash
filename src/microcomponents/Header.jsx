@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import NavItems from "./NavItems";
 import navlist from "./navlists";
-
+import Logo from "../assets/logo-black.png";
 const Header = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,6 +37,7 @@ const Header = () => {
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center me-auto me-lg-0">
+          <img src={Logo} />
           <h1 className="fs-1">GitCash</h1>
           <span>.</span>
         </Link>

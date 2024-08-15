@@ -1,12 +1,20 @@
 import React from "react";
-import codeSnippet from "../assets/main-dashboard.jpg";
-import miniSnippet from "../assets/code.png";
+import codeSnippet from "../assets/dashboard.png";
+import miniSnippet from "../assets/main-dashboard.jpg";
 
 const Dashboards = () => {
   return (
-    <section id="features" className="features section mt-0 p-0">
+    <section id="features" className="features section mt-5 p-0">
+      <div className="container mb-5">
+        <h2>Productivity</h2>
+        <h1 className="text-info">Accelerate innovation</h1>
+        <h3>
+          Our AI-powered platform increases the pace of software development.
+        </h3>
+      </div>
+
       <div className="container image-container ">
-        <div className="features-image col-lg-12">
+        <div className="features-image col-lg-12 shadow rounded-5">
           <img
             src={codeSnippet}
             alt="vs-code snippet"

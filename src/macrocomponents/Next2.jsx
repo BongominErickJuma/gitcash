@@ -1,5 +1,5 @@
 import React from "react";
-import nextDetails from "./nextDetalis";
+import { nextDetails2 as nextDetails } from "./nextDetalis";
 import Preview from "../assets/dev.jpg";
 
 const Next2 = () => {
@@ -26,7 +26,8 @@ const Next2 = () => {
                 </div>
 
                 <button className="btn-info-outline mt-5">
-                  Read More<i className="bi bi-arrow-right fs-4 ms-2"></i>
+                  GitCash Developer
+                  <i className="bi bi-arrow-right fs-4 ms-2"></i>
                 </button>
               </div>
               <div

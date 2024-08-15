@@ -26,8 +26,8 @@ const ProjectCard = ({
         <p className="text-black fs-6">{description}</p>
       </div>
       <div className="card-footer d-flex justify-content-between align-items-center">
-        <small className="text-info">{time} ago</small>
-        <span className="badge bg-info">Contribute</span>
+        <small className="text-info fs-6">{time} USD</small>
+        <span className="badge bg-info fs-6 fw-light">Contribute</span>
       </div>
     </div>
   );
@@ -39,7 +39,7 @@ const ProjectCard = ({
           href={contributeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-decoration-none h-100"
+          className="text-decoration-none h-100 text-white"
           style={{ display: "block" }}
         >
           {CardContent}
@@ -47,7 +47,7 @@ const ProjectCard = ({
       ) : (
         <Link
           to={contributeLink}
-          className="text-decoration-none h-100"
+          className="text-decoration-none h-100 text-white"
           style={{ display: "block" }}
         >
           {CardContent}

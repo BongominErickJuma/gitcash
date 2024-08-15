@@ -1,14 +1,25 @@
 const nextDetails = [
   {
-    testimony:
-      "The new workflow tools have streamlined our processes and significantly improved our team's efficiency.",
+    testimony: "Release your company/business product faster at no cost!",
     bullets: [
-      "Brand Exposure",
-      "Networking",
-      "Custom Solutions",
-      "Priority Support",
+      "Faster market deployments",
+      "Guaranteed product efficiency",
+      "24/7 hourly support and upgrades",
+      "Opensource communites you can trust",
     ],
   },
 ];
 
-export default nextDetails;
+const nextDetails2 = [
+  {
+    testimony: "Release your company/business product faster at no cost!",
+    bullets: [
+      "Faster market deployments",
+      "Guaranteed product efficiency",
+      "24/7 hourly support and upgrades",
+      "Opensource communites you can trust",
+    ],
+  },
+];
+
+export { nextDetails, nextDetails2 };

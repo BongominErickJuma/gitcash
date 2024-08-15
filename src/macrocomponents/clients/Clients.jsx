@@ -14,7 +14,7 @@ import {
 function Clients() {
   return (
     <div className="container my-5 ">
-      <h3>Trusted By:</h3>
+      <h2 className="mb-5">Trusted By:</h2>
       <Swiper
         loop={true}
         centeredSlides={true}

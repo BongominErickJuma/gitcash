@@ -32,6 +32,7 @@ const Testimonials = () => {
   return (
     <div>
       <div className="container mt-5 clients-testimony">
+        <h2 className="mb-5">Company Testimonials</h2>
         {/* Filter buttons */}
         <div className="mb-3 d-flex align-items-center justify-content-between">
           {testimonialDetails.map((testimonial, idx) => (

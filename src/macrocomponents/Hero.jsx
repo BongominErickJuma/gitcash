@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import bg from "../assets/world-dotted-map.png";
-import companyDetails from "./companyDetails";
-import projects from "./projectDetails";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 
 const Hero = () => {
+  const phrases = [
+    "business product with the best talent there is",
+    "satisfying MVP faster with less resources",
+    "professional dev skills easily",
+    "opensource career with support",
+  ];
+
+  const [currentPhrase, setCurrentPhrase] = useState("");
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentPhrase.length < phrases[phraseIndex].length) {
+      const interval = setInterval(() => {
+        setCurrentPhrase(
+          (prev) => prev + phrases[phraseIndex].charAt(prev.length)
+        );
+      }, 100); // 100ms delay between characters
+      return () => clearInterval(interval);
+    } else {
+      const timeout = setTimeout(() => {
+        setCurrentPhrase("");
+        setPhraseIndex((prev) => (prev + 1) % phrases.length);
+      }, 1000); // 1-second delay before moving to the next phrase
+      return () => clearTimeout(timeout);
+    }
+  }, [currentPhrase, phraseIndex]);
+
   return (
     <section
       id="hero"
@@ -14,26 +40,26 @@ const Hero = () => {
       <div
         data-aos="fade-up"
         data-aos-delay="100"
-        className="container mt-5 d-flex flex-column justify-content-center align-items-start"
+        className="container mt-5 d-flex flex-column justify-content-between align-items-start  main-container"
       >
         <div>
           <h2>
-            Let’s build from here<span>.</span>
+            Build your {currentPhrase}
+            <span>.</span>
           </h2>
-          <p>The world’s leading AI-powered developer platform.</p>{" "}
         </div>
-        <div className="row  mt-5">
+        <div className="row mt-5">
           <p className="fs-6 mb-3">Email Address</p>
           <form
             action="#"
-            className="col-lg-8 form-search rounded d-flex align-items-stretch  ms-2 mb-3 px-0"
+            className="col-lg-8 form-search rounded d-flex align-items-stretch ms-2 mb-3 px-0"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <input
               type="text"
-              className="form-control  border-0"
-              placeholder="yourcompany@gmail.com"
+              className="form-control border-0"
+              placeholder="yourname@mail.something"
             />
             <button
               type="submit"
@@ -58,7 +84,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="col-xl-12 floating-on-border container p-0">
-        <p className="text-white mb-2 fs-4 ps-2">Top Projects</p>
+        <p className="text-white mb-2 fs-4 ps-2">Most Paying Projects</p>
         <Projects />
       </div>
     </section>
