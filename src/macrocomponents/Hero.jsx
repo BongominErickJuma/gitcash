@@ -5,10 +5,10 @@ import Projects from "./Projects/Projects";
 
 const Hero = () => {
   const phrases = [
-    "business product with the best talent there is",
-    "satisfying MVP faster with less resources",
-    "professional dev skills easily",
-    "opensource career with support",
+    "business product with the best talent there is.",
+    "satisfying MVP faster with less resources.",
+    "professional dev skills easily.",
+    "opensource career with support.",
   ];
 
   const [currentPhrase, setCurrentPhrase] = useState("");
@@ -42,11 +42,8 @@ const Hero = () => {
         data-aos-delay="100"
         className="container mt-5 d-flex flex-column justify-content-between align-items-start  main-container"
       >
-        <div>
-          <h2>
-            Build your {currentPhrase}
-            <span>.</span>
-          </h2>
+        <div className=" w-100 phrase-container mb-5">
+          <h2>Build your {currentPhrase}</h2>
         </div>
         <div className="row mt-5">
           <p className="fs-6 mb-3">Email Address</p>
@@ -63,7 +60,7 @@ const Hero = () => {
             />
             <button
               type="submit"
-              className="btn btn-primary rounded-0 border-0 outline-0"
+              className="btn btn-primary rounded-0 border-0"
             >
               Signup for GitCash
             </button>
