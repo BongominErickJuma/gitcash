@@ -161,8 +161,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="container min-vh-100 account-form d-flex justify-content-center align-items-start account-page">
-      <div className="row w-100 d-flex justify-content-between align-items-center">
+    <div className="container min-vh-100 account-form d-flex justify-content-center align-items-start">
+      <div className="row w-100 d-flex justify-content-between align-items-center mt-5 pt-5">
+        <div className="pt-5"></div>
         <h2 className="card-title text-start mb-5 fw-bold">
           Sign up for GitCash
         </h2>

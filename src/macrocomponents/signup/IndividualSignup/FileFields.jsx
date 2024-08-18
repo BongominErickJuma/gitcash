@@ -55,6 +55,7 @@ const FileFields = ({ formData, handleChange, handleFileUpload }) => {
           name="identification_number"
           value={formData.identification_number}
           onChange={handleChange}
+          required
         />
       </div>
 

@@ -1207,10 +1207,6 @@ label {
   }
 }
 
-.account-page {
-  margin-top: 10vh !important;
-}
-
 /* Custom Switch Color */
 .form-check-input,
 .form-check-input:checked {
