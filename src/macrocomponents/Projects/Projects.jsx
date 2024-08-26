@@ -5,13 +5,7 @@ import projects from "./projectDetails";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import required modules
-import {
-  Autoplay,
-  Pagination,
-  Navigation,
-  Mousewheel,
-  Keyboard,
-} from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Projects = () => {
   return (

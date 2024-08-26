@@ -81,7 +81,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="col-xl-12 floating-on-border container p-0">
-        <p className="text-white mb-2 fs-4 ps-2">Most Paying Projects</p>
+        <p className="text-white mb-2  ps-2">Most Paying Projects</p>
         <Projects />
       </div>
     </section>

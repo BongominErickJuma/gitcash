@@ -901,12 +901,16 @@ section,
 
 .hero .floating-on-border {
   width: 100%;
-  height: 10rem !important;
+  height: 10vh !important;
   position: absolute;
   bottom: -4rem;
   z-index: 9;
   background-color: transparent;
   box-sizing: border-box;
+}
+
+.mySwiper {
+  height: 10vh;
 }
 
 .hero form {
