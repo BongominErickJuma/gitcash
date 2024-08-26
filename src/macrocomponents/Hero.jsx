@@ -40,12 +40,12 @@ const Hero = () => {
       <div
         data-aos="fade-up"
         data-aos-delay="100"
-        className="container mt-5 d-flex flex-column justify-content-between align-items-start  main-container"
+        className="container mt-5 d-flex flex-column justify-content-center align-items-start  main-container "
       >
-        <div className=" w-100 phrase-container mb-3">
+        <div className=" w-100 phrase-container">
           <h2>Build your {currentPhrase}</h2>
         </div>
-        <div className="row mt-3">
+        <div className="row container">
           <p className="fs-6 mb-3">Email Address</p>
           <form
             action="#"
