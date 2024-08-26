@@ -12,12 +12,12 @@ const nextDetails = [
 
 const nextDetails2 = [
   {
-    testimony: "Release your company/business product faster at no cost!",
+    testimony: "Collaborate on community impacting commercial opensource projects",
     bullets: [
-      "Faster market deployments",
-      "Guaranteed product efficiency",
-      "24/7 hourly support and upgrades",
-      "Opensource communites you can trust",
+      "Your profile in the spotlight",
+      "Guaranteed finacial benefits",
+      "Work from anywhere, anytime!",
+      "Tech community collaboration",
     ],
   },
 ];

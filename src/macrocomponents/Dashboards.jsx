@@ -6,8 +6,8 @@ const Dashboards = () => {
   return (
     <section id="features" className="features section mt-5 p-0">
       <div className="container mb-5">
-        <h2>Productivity</h2>
-        <h1 className="text-info">Accelerate innovation</h1>
+        <h2>Intelligent Productivity</h2>
+        <h1 className="text-info">AI Powered Commercial Opensource</h1>
         <h3>
           Our AI-powered platform increases the pace of software development.
         </h3>
