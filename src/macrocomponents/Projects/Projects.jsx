@@ -28,11 +28,12 @@ const Projects = () => {
         prevEl: ".swiper-button-prev",
       }}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
+      className="mySwiper projectSwiper"
     >
       {projects.map((project, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} className="projectSlides">
           <ProjectCard
+            className="ProjectCard"
             title={project.title}
             description={project.description}
             time={project.time}
