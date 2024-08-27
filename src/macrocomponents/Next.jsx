@@ -1,8 +1,21 @@
 import React from "react";
 import { nextDetails } from "./nextDetalis";
 import Preview from "../assets/preview.png";
+import svg from "../assets/svgs/icon-list.svg";
 
 const Next = () => {
+  const listStyle = {
+    listStyleType: "none",
+    paddingLeft: "0",
+    margin: "0", // Optional: to remove margin
+  };
+
+  const liStyle = {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "8px", // Space between list items
+  };
+
   return (
     <div>
       <div className="container mt-5 clients-testimony">
@@ -24,9 +37,10 @@ const Next = () => {
               >
                 <div>
                   <h1 className="fw-light">{next.testimony}</h1>
-                  <ul className="mt-2">
+                  <ul style={listStyle}>
                     {next.bullets.map((benefit, index) => (
-                      <li key={index} className="fs-4">
+                      <li key={index} style={liStyle}>
+                        <img src={svg} alt="check svg" className="me-2" />
                         {benefit}
                       </li>
                     ))}
