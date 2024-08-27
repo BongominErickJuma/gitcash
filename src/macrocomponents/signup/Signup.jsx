@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import IndividualSignup from "./IndividualSignup/IndividualSignup"; // Assuming these components exist
 import OrganizationSignup from "./OrganizationSignup/OrganizationSignup";
 
+import svg from "../../assets/svgs/icon-list.svg";
+
 const Signup = () => {
   const [signupType, setSignupType] = useState(null);
 
@@ -24,6 +26,23 @@ const Signup = () => {
   const [bullets, setBullets] = useState([]);
   const [bulletIndex, setBulletIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+
+  const listStyle = {
+    listStyleType: "none",
+    paddingLeft: "0",
+    margin: "0", // Optional: to remove margin
+  };
+
+  const liStyle = {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "8px", // Space between list items
+  };
+
+  const imgStyle = {
+    width: "24px",
+    height: "24px",
+  };
 
   useEffect(() => {
     if (signupType) {
@@ -139,18 +158,24 @@ const Signup = () => {
           <div className="col-lg-5 account-type">
             <div className="">
               <h2>Benefits</h2>
-              <ul>
+              <ul style={listStyle}>
                 {individualBenefits.map((benefit, index) => (
-                  <li key={index}>{benefit}</li>
+                  <li key={index} style={liStyle}>
+                    <img src={svg} alt="check svg" className="me-2" />
+                    {benefit}
+                  </li>
                 ))}
               </ul>
             </div>
 
             <div className="mt-5">
               <h2>Benefits</h2>
-              <ul>
+              <ul style={listStyle}>
                 {organizationBenefits.map((benefit, index) => (
-                  <li key={index}>{benefit}</li>
+                  <li key={index} style={liStyle}>
+                    <img src={svg} alt="check svg" className="me-2" />
+                    {benefit}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -178,7 +203,16 @@ const Signup = () => {
                 <h2 className="fw-light">{displayText}</h2>
                 <ul>
                   {bullets.map((bullet, index) => (
-                    <li key={index} className="ps-5">
+                    // <li key={index} className="ps-5">
+                    //   <h2 className="fw-bold">{bullet}</h2>
+                    // </li>
+                    <li key={index} style={liStyle}>
+                      <img
+                        src={svg}
+                        alt="check svg"
+                        className="me-2"
+                        style={imgStyle}
+                      />
                       <h2 className="fw-bold">{bullet}</h2>
                     </li>
                   ))}
