@@ -1,6 +1,6 @@
 .testimonials-container {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   justify-content: space-between;
   align-items: start;
 }
@@ -9,7 +9,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Add some spacing between testimonials */
+  gap: 2rem;
 }
 
 .testimonial {
@@ -20,12 +20,12 @@
 /* Media queries for smaller screens */
 @media (max-width: 1200px) {
   .testimonial-column {
-    flex: 1 1 calc(50% - 1rem); /* Two columns on medium-large screens */
+    flex: 1 1 calc(50% - 1rem);
   }
 }
 
 @media (max-width: 768px) {
   .testimonial-column {
-    flex: 1 1 100%; /* Full width on medium-small screens */
+    flex: 1 1 100%;
   }
 }

@@ -54,7 +54,7 @@ const Header = () => {
               <a href="#contact">Pricing</a>
             </li>
           </ul>
-          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <i className="mobile-nav-toggle d-xl-none bi bi-list text-white"></i>
         </nav>
 
         <Link className="btn-getstarted" to={buttonLink}>

@@ -45,42 +45,44 @@ const Hero = () => {
         <div className=" w-100 phrase-container">
           <h2>Build your {currentPhrase}</h2>
         </div>
-        <div className="row container">
-          <p className="fs-6 mb-3">Email Address</p>
-          <form
-            action="#"
-            className="col-lg-8 form-search rounded d-flex align-items-stretch ms-2 mb-3 px-0"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <input
-              type="text"
-              className="form-control border-0"
-              placeholder="yourname@mail.something"
-            />
-            <button
-              type="submit"
-              className="btn btn-primary rounded-0 border-0"
+        <div className="mx-2 border w-100">
+          <div className="row">
+            <p className="mb-3">Email Address</p>
+            <form
+              action="#"
+              className="col-lg-8 form-search rounded d-flex align-items-stretch mb-3 px-0"
+              data-aos="fade-up"
+              data-aos-delay="200"
             >
-              Signup for GitCash
-            </button>
-          </form>
-          <form
-            action="#"
-            className="col-lg-3 form-search rounded-end d-flex align-items-stretch mb-3 ms-5 bg-dark"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <button
-              type="submit"
-              className="btn btn-primary w-100 border-0 bg-dark text-white"
+              <input
+                type="text"
+                className="form-control border-0"
+                placeholder="yourname@mail.something"
+              />
+              <button
+                type="submit"
+                className="btn btn-primary rounded-0 border-0"
+              >
+                Signup for GitCash
+              </button>
+            </form>
+            <form
+              action="#"
+              className="col-md-12 col-lg-3 form-search enterprise-form rounded-end d-flex align-items-stretch mb-3 bg-dark"
+              data-aos="fade-up"
+              data-aos-delay="200"
             >
-              Enterprise SignUp
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="btn btn-primary w-100 border-0 bg-dark text-white"
+              >
+                Enterprise SignUp
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-      <div className="col-xl-12 floating-on-border container p-0">
+      <div className="col-xl-12 floating-on-border container p-0 mx-2">
         <p className="text-white mb-2  ps-2">Most Paying Projects</p>
         <Projects />
       </div>

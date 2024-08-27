@@ -8,6 +8,9 @@ const Footer = () => {
       <div className="footer-top">
         <div className="container">
           <div className="col-xl-12 floating-on-border container shadow rounded-4 d-flex align-items-center justify-content-end">
+            <div className="footer-image">
+              <img src={payment} alt="payment" className="d-block w-100" />
+            </div>
             <div className="d-flex align-items-start justify-content-betwen w-75">
               <div className="pt-2 w-75  ">
                 <h2>Unleash your development side with GitCash desktop!</h2>
@@ -24,9 +27,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="footer-image">
-            <img src={payment} alt="payment" className="d-block w-100" />
-          </div>
+
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6 footer-about">
               <a href="index.html" className="logo d-flex align-items-center">

@@ -8,17 +8,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Projects = () => {
+  // Define the breakpoints for responsive slidesPerView
+  const breakpoints = {
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  };
+
   return (
     <Swiper
       loop={true}
       centeredSlides={false}
       autoplay={{
-        delay: 1,
+        delay: 3000, // Adjust autoplay delay to a reasonable value
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       }}
-      slidesPerView={4}
-      spaceBetween={20} //
+      slidesPerView={4} // Default slidesPerView for larger screens
+      spaceBetween={20}
       speed={3000}
       grabCursor={true}
       mousewheel={false}
@@ -29,6 +45,7 @@ const Projects = () => {
       }}
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper projectSwiper"
+      breakpoints={breakpoints} // Apply breakpoints for responsive design
     >
       {projects.map((project, index) => (
         <SwiperSlide key={index} className="projectSlides">
